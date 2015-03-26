@@ -4,16 +4,19 @@
 
 [EN version](https://github.com/Effeilo/ergonomize.css/)
 
-Le but d'ergonomize.css est d'apporter quelques règles supplémentaires aux éléments html améliorant l'expérience utilisateur en évitant de dénaturer les styles par défauts de ces éléments.
+Ergonomize.css est un fichier CSS ayant pour but d’apporter des règles aux éléments html améliorant l’expérience utilisateur en évitant de dénaturer les styles par défauts de ces éléments.
 
-## Que trouve t-on dedans ?
+## Vue d’ensemble
 
-Le fichier ergonomize.css est documenté, vous trouverez les explications détaillées directement dedans.
-Voici les principaux éléments qu'il apporte :
+Ergonomize.css est un ensemble de règles CSS glanées ici et là en parcourant les nombreuses ressources offertes par la communauté.
+Il a été pensé pour être complémentaire à normalize.css, qui harmonise les styles par défaut des éléments HTML entre les différents navigateurs.
+Après avoir normalisé les styles des éléments HTML, on va ajouter des règles à ces derniers visant à en améliorer l’ergonomie.
 
-* Permet à l'utilisateur de mieux comprendre certains éléments du site.
+Voici les principaux éléments qu’il apporte :
+
+* Permet à l’utilisateur de mieux comprendre certains éléments du site.
 * Optimise certains éléments pour le responsive.
-* Améliore l'ergonomie pour certains mobiles et tablettes.
+* Améliore l’ergonomie pour certains mobiles et tablettes.
 * Hyphenation.
 
 ## Comment l'utiliser ?
@@ -29,6 +32,7 @@ Quelques points à garder à l'esprit si vous souhaitez contribuer :
 * Seul les éléments html sont déclarés dans ergonomize.css (pas d'ajout de classes).
 * Ergonomize.css a été penser pour être complémentaire à [normalize.css](http://necolas.github.io/normalize.css/), les règles doivent le moins possible dénaturer ce dernier.
 * Aucuns styles de mise en forme répondant à un thème.
+* Documenter dans les commentaires.
 
 ## Remerciements
 
