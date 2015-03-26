@@ -1,0 +1,294 @@
+/*! ergonomize.css v1.0.0 | github.com/Effeilo/ergonomize.css | @effeilo */
+
+/**
+ * 1. Ensure the page always fills at least the entire height of the viewport.
+ * 2. Force scrollbars to always be visible to prevent awkward jumps when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. @css-for some Firefox.
+ * 4. The content continues to scroll slightly after removal of the finger
+ *    on the screen.
+ *    @css-for iOS 5.0+.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ *    @css-for OSX.
+ * 6. Remove the highlighting effect when "tapped" action on webkit.
+ *    @css-for Androids.
+ * 7. @css-for some Androids.
+ */
+
+html {
+  min-height: 100%; /* 1 */
+  overflow-y: scroll; /* 2 */
+  overflow: -moz-scrollbars-vertical; /* 3 */
+  -webkit-overflow-scrolling: touch; /* 4 */
+  -moz-osx-font-smoothing: grayscale; /* 5 */
+   -webkit-font-smoothing: antialiased; /* 5 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/**
+ * Remove text-shadow in selection highlight.
+ * 1. @css-for Firefox 2+, Firefox for Android 33+.
+ * 2. @css-for IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
+ */
+
+::-moz-selection { /* 1 */
+  text-shadow: none;
+}
+
+::selection { /* 2 */
+  text-shadow: none;
+}
+
+/* Sections
+------------------------------------------------------ */
+
+/**
+ * Hyphens CSS3 property allows hyphenation on the texts.
+ * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
+ *    Alternatively, the 'word-break' property is initialized with the 
+ *    "break-word" non-standard value.
+ * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
+ * 3. @css-for Firefox 6+.
+ * 4. @css-for Firefox IE 10+.
+ */
+
+body {
+  word-wrap: break-word; /* 1 */
+  -webkit-hyphens: auto; /* 2 */
+     -moz-hyphens: auto; /* 3 */
+      -ms-hyphens: auto; /* 4 */
+       -o-hyphens: auto;
+          hyphens: auto;
+}
+
+/* Grouping content
+------------------------------------------------------ */
+
+/**
+ * Current browsers do not handle hyphens in the rules of art.
+ * Remove hyphenation for some elements.
+ * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
+ *    Alternatively, the 'word-break' property is initialized with the 
+ *    "break-word" non-standard value.
+ * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
+ * 3. @css-for Firefox 6+.
+ * 4. @css-for Firefox IE 10+.
+ */
+ 
+blockquote {
+  word-wrap: normal; /* 1 */
+  -webkit-hyphens: none; /* 2 */
+     -moz-hyphens: none; /* 3 */
+      -ms-hyphens: none; /* 4 */
+       -o-hyphens: none;
+          hyphens: none;
+}
+
+/**
+ * Prevents certain content from spilling their container.
+ * 1. @bugfix * @affected IE 8.
+ */
+
+blockquote,
+pre {
+  max-width: 100%;
+  width: auto; /* 1 */
+}
+
+/* Text-level semantics
+------------------------------------------------------ */
+
+/**
+ * Current browsers do not handle hyphens in the rules of art.
+ * Remove hyphenation for some elements.
+ * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
+ *    Alternatively, the 'word-break' property is initialized with the 
+ *    "break-word" non-standard value.
+ * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
+ * 3. @css-for Firefox 6+.
+ * 4. @css-for Firefox IE 10+.
+ */
+
+abbr, 
+code,
+kbd, 
+q, 
+samp,
+var {
+  word-wrap: normal; /* 1 */
+  -webkit-hyphens: none; /* 2 */
+     -moz-hyphens: none; /* 3 */
+      -ms-hyphens: none; /* 4 */
+       -o-hyphens: none;
+          hyphens: none;
+}
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+/**
+ * 1. Prevents certain content from spilling their container.
+ * 2. @bugfix * @affected IE 8.
+ * 3. @bugfix * @affected IE.
+ * 4. Display the text as it was written and line breaks so that 
+ *    the text does not leave the block.
+ */
+
+code {
+  max-width: 100%; /* 1 */
+  width: auto; /* 2 */
+  white-space: pre-line; /* 3 */
+  white-space: pre-wrap; /* 4 */
+}
+
+/* Embedded content
+------------------------------------------------------ */
+
+/**
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers.
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/**
+ * 1. Preserves the aspect ratio.
+ * 2. Prevents certain content from spilling their container.
+ * 3. @bugfix * @affected IE 8.
+ */
+
+img,
+svg,
+video {
+  height: auto; /* 1 */
+  max-width: 100%; /* 2 */
+  width: auto; /* 3 */
+}
+
+/**
+ * Bicubic image smoothing during a resizing.
+ * @css-for IE7.
+ */
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/**
+ * Disable highlight on image when select and drag it with the mouse.
+ * 1. @css-for Firefox 2+, Firefox for Android 33+.
+ * 2. @css-for IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
+ */
+
+img::-moz-selection { /* 1 */
+  background-color: transparent;
+}
+
+img::selection { /* 2 */
+  background-color: transparent;
+}
+
+/* Tables
+------------------------------------------------------ */
+
+/**
+ * Prevents certain content from spilling their container.
+ * 1. @bugfix * @affected IE 8.
+ */
+
+table,
+td {
+  max-width: 100%;
+  width: auto; /* 1 */
+}
+
+/* Forms
+------------------------------------------------------ */
+
+/**
+ * Current browsers do not handle hyphens in the rules of art.
+ * Remove hyphenation for input element.
+ * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
+ *    Alternatively, the 'word-break' property is initialized with the 
+ *    "break-word" non-standard value.
+ * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
+ * 3. @css-for Firefox 6+.
+ * 4. @css-for Firefox IE 10+.
+ */
+
+input {
+  word-wrap: normal; /* 1 */
+  -webkit-hyphens: none; /* 2 */
+     -moz-hyphens: none; /* 3 */
+      -ms-hyphens: none; /* 4 */
+       -o-hyphens: none;
+          hyphens: none;
+}
+
+/**
+ * Fix vertical align.
+ */
+
+button,
+input,
+label,
+select {
+  vertical-align: middle;
+}
+
+/**
+ * Makes you want to click a label.
+ */
+
+label {
+  cursor: pointer;
+}
+
+/**
+ * Prevents certain content from spilling their container.
+ * 1. @bugfix * @affected IE 8.
+ */
+
+input,
+textarea {
+  max-width: 100%;
+  width: auto; /* 1 */
+}
+
+/**
+ * Allow only vertical resizing of textareas.
+ * @css-for Firefox 5+, Chrome 4+, Safari 4+, opera 12.1+.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/**
+ * 'x' appears on right of search input when text is entered. 
+ * This removes it and get rid of superfluous padding.
+ * @css-for Chrome.
+ */
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
