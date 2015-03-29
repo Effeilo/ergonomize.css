@@ -1,20 +1,24 @@
 /*! ergonomize.css v1.0.0 | github.com/Effeilo/ergonomize.css | @effeilo */
 
-/**
+/*
  * 1. Ensure the page always fills at least the entire height of the viewport.
  * 2. Force scrollbars to always be visible to prevent awkward jumps when
  *    navigating between pages that do/do not have enough content to produce
  *    scrollbars naturally.
  * 3. @css-for some Firefox.
- * 4. The content continues to scroll slightly after removal of the finger
+ * @see https://css-tricks.com/snippets/css/force-vertical-scrollbar/
+ * 4. The content continues to scroll slightly after removal of the finger.
  *    on the screen.
  *    @css-for iOS 5.0+.
+ * @see https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
  * 5. Fonts on OSX will look more consistent with other systems that do not
  *    render text using sub-pixel anti-aliasing.
  *    @css-for OSX.
+ * @see http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
  * 6. Remove the highlighting effect when "tapped" action on webkit.
  *    @css-for Androids.
  * 7. @css-for some Androids.
+ * @see http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
  */
 
 html {
@@ -28,10 +32,11 @@ html {
   -webkit-tap-highlight-color: transparent; /* 7 */
 }
 
-/**
+/*
  * Remove text-shadow in selection highlight.
  * 1. @css-for Firefox 2+, Firefox for Android 33+.
  * 2. @css-for IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
+ * @see https://twitter.com/miketaylr/status/12228805301
  */
 
 ::-moz-selection { /* 1 */
@@ -45,7 +50,7 @@ html {
 /* Sections
 ------------------------------------------------------ */
 
-/**
+/*
  * Hyphens CSS3 property allows hyphenation on the texts.
  * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
  *    Alternatively, the 'word-break' property is initialized with the 
@@ -53,6 +58,7 @@ html {
  * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
  * 3. @css-for Firefox 6+.
  * 4. @css-for Firefox IE 10+.
+ * @see https://css-tricks.com/almanac/properties/h/hyphenate/
  */
 
 body {
@@ -67,7 +73,7 @@ body {
 /* Grouping content
 ------------------------------------------------------ */
 
-/**
+/*
  * Current browsers do not handle hyphens in the rules of art.
  * Remove hyphenation for some elements.
  * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
@@ -76,6 +82,7 @@ body {
  * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
  * 3. @css-for Firefox 6+.
  * 4. @css-for Firefox IE 10+.
+ * @see https://css-tricks.com/almanac/properties/h/hyphenate/
  */
  
 blockquote {
@@ -87,7 +94,7 @@ blockquote {
           hyphens: none;
 }
 
-/**
+/*
  * Prevents certain content from spilling their container.
  * 1. @bugfix * @affected IE 8.
  */
@@ -101,7 +108,7 @@ pre {
 /* Text-level semantics
 ------------------------------------------------------ */
 
-/**
+/*
  * Current browsers do not handle hyphens in the rules of art.
  * Remove hyphenation for some elements.
  * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
@@ -126,7 +133,7 @@ var {
           hyphens: none;
 }
 
-/**
+/*
  * Give a help cursor to elements that give extra info on `:hover`.
  */
 
@@ -135,7 +142,7 @@ dfn[title] {
   cursor: help;
 }
 
-/**
+/*
  * 1. Prevents certain content from spilling their container.
  * 2. @bugfix * @affected IE 8.
  * 3. @bugfix * @affected IE.
@@ -153,9 +160,10 @@ code {
 /* Embedded content
 ------------------------------------------------------ */
 
-/**
+/*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers.
+ * @see: https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
 audio,
@@ -167,7 +175,7 @@ video {
   vertical-align: middle;
 }
 
-/**
+/*
  * 1. Preserves the aspect ratio.
  * 2. Prevents certain content from spilling their container.
  * 3. @bugfix * @affected IE 8.
@@ -181,7 +189,7 @@ video {
   width: auto; /* 3 */
 }
 
-/**
+/*
  * Bicubic image smoothing during a resizing.
  * @css-for IE7.
  */
@@ -190,10 +198,11 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
-/**
+/*
  * Disable highlight on image when select and drag it with the mouse.
  * 1. @css-for Firefox 2+, Firefox for Android 33+.
  * 2. @css-for IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
+ * @see: http://stackoverflow.com/questions/6816080/how-to-disable-highlight-on-a-image
  */
 
 img::-moz-selection { /* 1 */
@@ -207,7 +216,7 @@ img::selection { /* 2 */
 /* Tables
 ------------------------------------------------------ */
 
-/**
+/*
  * Prevents certain content from spilling their container.
  * 1. @bugfix * @affected IE 8.
  */
@@ -221,7 +230,7 @@ td {
 /* Forms
 ------------------------------------------------------ */
 
-/**
+/*
  * Current browsers do not handle hyphens in the rules of art.
  * Remove hyphenation for input element.
  * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
@@ -241,7 +250,7 @@ input {
           hyphens: none;
 }
 
-/**
+/*
  * Fix vertical align.
  */
 
@@ -252,7 +261,7 @@ select {
   vertical-align: middle;
 }
 
-/**
+/*
  * Makes you want to click a label.
  */
 
@@ -260,7 +269,7 @@ label {
   cursor: pointer;
 }
 
-/**
+/*
  * Prevents certain content from spilling their container.
  * 1. @bugfix * @affected IE 8.
  */
@@ -271,7 +280,7 @@ textarea {
   width: auto; /* 1 */
 }
 
-/**
+/*
  * Allow only vertical resizing of textareas.
  * @css-for Firefox 5+, Chrome 4+, Safari 4+, opera 12.1+.
  */
@@ -280,10 +289,11 @@ textarea {
   resize: vertical;
 }
 
-/**
+/*
  * 'x' appears on right of search input when text is entered. 
  * This removes it and get rid of superfluous padding.
  * @css-for Chrome.
+ * @see https://css-tricks.com/webkit-html5-search-inputs/#comment-82432
  */
 
 input[type="search"]::-webkit-search-decoration,
