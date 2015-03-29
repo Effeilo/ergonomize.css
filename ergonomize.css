@@ -6,11 +6,11 @@
  *    navigating between pages that do/do not have enough content to produce
  *    scrollbars naturally.
  * 3. @css-for some Firefox.
- * @see https://css-tricks.com/snippets/css/force-vertical-scrollbar/
+ * @see //css-tricks.com/snippets/css/force-vertical-scrollbar/
  * 4. The content continues to scroll slightly after removal of the finger.
  *    on the screen.
  *    @css-for iOS 5.0+.
- * @see https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
+ * @see //css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
  * 5. Fonts on OSX will look more consistent with other systems that do not
  *    render text using sub-pixel anti-aliasing.
  *    @css-for OSX.
@@ -18,7 +18,7 @@
  * 6. Remove the highlighting effect when "tapped" action on webkit.
  *    @css-for Androids.
  * 7. @css-for some Androids.
- * @see http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
+ * @see //phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
  */
 
 html {
@@ -36,7 +36,7 @@ html {
  * Remove text-shadow in selection highlight.
  * 1. @css-for Firefox 2+, Firefox for Android 33+.
  * 2. @css-for IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
- * @see https://twitter.com/miketaylr/status/12228805301
+ * @see //twitter.com/miketaylr/status/12228805301
  */
 
 ::-moz-selection { /* 1 */
@@ -58,7 +58,7 @@ html {
  * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
  * 3. @css-for Firefox 6+.
  * 4. @css-for Firefox IE 10+.
- * @see https://css-tricks.com/almanac/properties/h/hyphenate/
+ * @see //css-tricks.com/almanac/properties/h/hyphenate/
  */
 
 body {
@@ -82,7 +82,7 @@ body {
  * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
  * 3. @css-for Firefox 6+.
  * 4. @css-for Firefox IE 10+.
- * @see https://css-tricks.com/almanac/properties/h/hyphenate/
+ * @see //css-tricks.com/almanac/properties/h/hyphenate/
  */
  
 blockquote {
@@ -117,6 +117,7 @@ pre {
  * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
  * 3. @css-for Firefox 6+.
  * 4. @css-for Firefox IE 10+.
+ * @see //css-tricks.com/almanac/properties/h/hyphenate
  */
 
 abbr, 
@@ -163,7 +164,7 @@ code {
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers.
- * @see: https://github.com/h5bp/html5-boilerplate/issues/440
+ * @see: //github.com/h5bp/html5-boilerplate/issues/440
  */
 
 audio,
@@ -202,7 +203,7 @@ img {
  * Disable highlight on image when select and drag it with the mouse.
  * 1. @css-for Firefox 2+, Firefox for Android 33+.
  * 2. @css-for IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
- * @see: http://stackoverflow.com/questions/6816080/how-to-disable-highlight-on-a-image
+ * @see: //stackoverflow.com/questions/6816080/how-to-disable-highlight-on-a-image
  */
 
 img::-moz-selection { /* 1 */
@@ -239,6 +240,7 @@ td {
  * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
  * 3. @css-for Firefox 6+.
  * 4. @css-for Firefox IE 10+.
+ * @see //css-tricks.com/almanac/properties/h/hyphenate
  */
 
 input {
@@ -293,7 +295,7 @@ textarea {
  * 'x' appears on right of search input when text is entered. 
  * This removes it and get rid of superfluous padding.
  * @css-for Chrome.
- * @see https://css-tricks.com/webkit-html5-search-inputs/#comment-82432
+ * @see //css-tricks.com/webkit-html5-search-inputs/#comment-82432
  */
 
 input[type="search"]::-webkit-search-decoration,
