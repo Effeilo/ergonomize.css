@@ -4,3 +4,4 @@
 * Add CHANGELOG.md file.
 * Remove `http:` in comments.
 * Remove minify and withour comments files.
+* Add @see links in comments.
