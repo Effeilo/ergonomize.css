@@ -44,4 +44,4 @@ Ce fichier à été réalisé avec les informations glanées ici et là en parco
 * [Knacss](http://www.knacss.com/)
 * [RöCSSti](http://rocssti.net/)
 * [Inuit CSS](https://github.com/inuitcss)
-* ...
+* etc.
