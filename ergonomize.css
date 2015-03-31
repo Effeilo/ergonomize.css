@@ -2,19 +2,23 @@
 
 /*
  * 1. Ensure the page always fills at least the entire height of the viewport.
+ *
  * 2. Force scrollbars to always be visible to prevent awkward jumps when
  *    navigating between pages that do/do not have enough content to produce
  *    scrollbars naturally.
  * 3. @css-for some Firefox.
  * @see //css-tricks.com/snippets/css/force-vertical-scrollbar/
+ *
  * 4. The content continues to scroll slightly after removal of the finger.
  *    on the screen.
  *    @css-for iOS 5.0+.
  * @see //css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
+ *
  * 5. Fonts on OSX will look more consistent with other systems that do not
  *    render text using sub-pixel anti-aliasing.
  *    @css-for OSX.
  * @see http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
+ *
  * 6. Remove the highlighting effect when "tapped" action on webkit.
  *    @css-for Androids.
  * 7. @css-for some Androids.
