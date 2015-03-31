@@ -1,6 +1,6 @@
-![Ergonomize.css v1.0.0](http://effeiloweb.fr/ergonomize.css/ergonomizecss.png)
+![Ergonomize.css v1.0.1](http://effeiloweb.fr/ergonomize.css/ergonomizecss.png)
 
-# ergonomize.css v1.0.0
+# ergonomize.css v1.0.1
 
 [Version FR](https://github.com/Effeilo/ergonomize.css/blob/master/README-FR.md)
 
