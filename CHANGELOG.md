@@ -2,3 +2,5 @@
 
 * Editing README.md and README-FR.md files.
 * Add CHANGELOG.md file.
+* Remove `http:` in comments.
+* Remove minify and withour comments files.
