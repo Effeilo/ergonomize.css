@@ -1,3 +1,7 @@
+#### ergonomize.css v1.0.2 : April 1, 2015
+
+* Apply the right typographical quotation marks rules based on language fir `q`(specify the lang attribute in HTML).
+
 #### ergonomize.css v1.0.1 : March 31, 2015
 
 * Editing README.md and README-FR.md files.
