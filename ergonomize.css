@@ -162,6 +162,30 @@ code {
   white-space: pre-wrap; /* 4 */
 }
 
+/*
+ * Apply the right rules for typographical quotation marks 
+ * based on language (specify the lang attribute in HTML).
+ * 1. For English language “English”.
+ * 2. For French language « French ».
+ * 3. For German language »German«.
+ * 4. For Spanish language «Spanish».
+ * 5. For Italian language « Italian ».
+ */
+
+q:before {
+  content: open-quote;
+}
+
+q:after {
+  content: close-quote;
+}
+
+q:lang(en) { quotes: "\201c" "\201d"; /* 1 */ }
+q:lang(fr) { quotes: "\00ab\a0" "\a0\00bb"; /* 2 */  }
+q:lang(de) { quotes: "\00bb" "\00ab"; /* 3 */ }
+q:lang(es) { quotes: "\00ab" "\00bb"; /* 4 */ }
+q:lang(it) { quotes: "\00ab\A0" "\A0\00bb"; /* 5 */ }
+
 /* Embedded content
 ------------------------------------------------------ */
 
