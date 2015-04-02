@@ -1,8 +1,7 @@
 /*! ergonomize.css v1.0.2 | github.com/Effeilo/ergonomize.css | @effeilo */
 
-/* -----------------------------------------------------------
-Viewport
------------------------------------------------------------ */
+/* Viewport
+------------------------------------------------------ */
 
 /**
  * This module incorporates the basic principles of meta viewport
@@ -19,6 +18,9 @@ Viewport
 @-o-viewport{
   width: device-width; /* 2 */
 }
+
+/* The root element
+------------------------------------------------------ */
 
 /*
  * 1. Ensure the page always fills at least the entire height of the viewport.
