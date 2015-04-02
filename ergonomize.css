@@ -1,5 +1,25 @@
 /*! ergonomize.css v1.0.2 | github.com/Effeilo/ergonomize.css | @effeilo */
 
+/* -----------------------------------------------------------
+Viewport
+----------------------------------------------------------- */
+
+/**
+ * This module incorporates the basic principles of meta viewport
+ * but respecting the writing standards CSS.
+ * @css-for IE 10+, IE mobile 10+, Opera mini 8
+ * 1. @css-for IE 10+, IE mobile 10+.
+ * 2. @css-for Opera mini 8.
+ */
+
+@-ms-viewport{
+  width: device-width; /* 1 */
+}
+
+@-o-viewport{
+  width: device-width; /* 2 */
+}
+
 /*
  * 1. Ensure the page always fills at least the entire height of the viewport.
  *
