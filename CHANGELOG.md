@@ -2,6 +2,7 @@
 
 * Remove `q` rules.
 * Remove Hyphens.
+* Remove interpolation mode for `img`.
 * Upgrade @viewport rules.
 
 #### ergonomize.css v1.0.2 : April 1, 2015

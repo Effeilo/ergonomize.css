@@ -160,15 +160,6 @@ video {
 }
 
 /*
- * Bicubic image smoothing during a resizing.
- * @css-for IE7.
- */
-
-img {
-  -ms-interpolation-mode: bicubic;
-}
-
-/*
  * Disable highlight on image when select and drag it with the mouse.
  * 1. @css-for Firefox 2+, Firefox for Android 33+.
  * 2. @css-for IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
