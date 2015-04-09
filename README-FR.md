@@ -19,7 +19,7 @@ Voici les principaux éléments qu’il apporte :
 * Permet à l’utilisateur de mieux comprendre certains éléments du site.
 * Optimise certains éléments pour le responsive.
 * Améliore l’ergonomie pour certains mobiles et tablettes.
-* Hyphenation.
+* Viewport.
 
 ## Comment l'utiliser ?
 
