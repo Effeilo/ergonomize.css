@@ -19,7 +19,7 @@ Keys elements it brings:
 * Allow the user to better understand somes elements of the site.
 * Optimize somes elements for responsive design.
 * Improve ergonomics for mobile and tablets.
-* Hyphenation.
+* Viewport.
 
 ## How to use it ?
 
