@@ -73,52 +73,8 @@ html {
   text-shadow: none;
 }
 
-/* Sections
------------------------------------------------------- */
-
-/*
- * Hyphens CSS3 property allows hyphenation on the texts.
- * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
- *    Alternatively, the 'word-break' property is initialized with the 
- *    "break-word" non-standard value.
- * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
- * 3. @css-for Firefox 6+.
- * 4. @css-for Firefox IE 10+.
- * @see //css-tricks.com/almanac/properties/h/hyphenate/
- */
-
-body {
-  word-wrap: break-word; /* 1 */
-  -webkit-hyphens: auto; /* 2 */
-     -moz-hyphens: auto; /* 3 */
-      -ms-hyphens: auto; /* 4 */
-       -o-hyphens: auto;
-          hyphens: auto;
-}
-
 /* Grouping content
 ------------------------------------------------------ */
-
-/*
- * Current browsers do not handle hyphens in the rules of art.
- * Remove hyphenation for some elements.
- * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
- *    Alternatively, the 'word-break' property is initialized with the 
- *    "break-word" non-standard value.
- * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
- * 3. @css-for Firefox 6+.
- * 4. @css-for Firefox IE 10+.
- * @see //css-tricks.com/almanac/properties/h/hyphenate/
- */
- 
-blockquote {
-  word-wrap: normal; /* 1 */
-  -webkit-hyphens: none; /* 2 */
-     -moz-hyphens: none; /* 3 */
-      -ms-hyphens: none; /* 4 */
-       -o-hyphens: none;
-          hyphens: none;
-}
 
 /*
  * Prevents certain content from spilling their container.
@@ -133,32 +89,6 @@ pre {
 
 /* Text-level semantics
 ------------------------------------------------------ */
-
-/*
- * Current browsers do not handle hyphens in the rules of art.
- * Remove hyphenation for some elements.
- * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
- *    Alternatively, the 'word-break' property is initialized with the 
- *    "break-word" non-standard value.
- * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
- * 3. @css-for Firefox 6+.
- * 4. @css-for Firefox IE 10+.
- * @see //css-tricks.com/almanac/properties/h/hyphenate
- */
-
-abbr, 
-code,
-kbd, 
-q, 
-samp,
-var {
-  word-wrap: normal; /* 1 */
-  -webkit-hyphens: none; /* 2 */
-     -moz-hyphens: none; /* 3 */
-      -ms-hyphens: none; /* 4 */
-       -o-hyphens: none;
-          hyphens: none;
-}
 
 /*
  * Give a help cursor to elements that give extra info on `:hover`.
@@ -183,30 +113,6 @@ code {
   white-space: pre-line; /* 3 */
   white-space: pre-wrap; /* 4 */
 }
-
-/*
- * Apply the right rules for typographical quotation marks 
- * based on language (specify the lang attribute in HTML).
- * 1. For English language “English”.
- * 2. For French language « French ».
- * 3. For German language »German«.
- * 4. For Spanish language «Spanish».
- * 5. For Italian language « Italian ».
- */
-
-q:before {
-  content: open-quote;
-}
-
-q:after {
-  content: close-quote;
-}
-
-q:lang(en) { quotes: "\201c" "\201d"; /* 1 */ }
-q:lang(fr) { quotes: "\00ab\a0" "\a0\00bb"; /* 2 */  }
-q:lang(de) { quotes: "\00bb" "\00ab"; /* 3 */ }
-q:lang(es) { quotes: "\00ab" "\00bb"; /* 4 */ }
-q:lang(it) { quotes: "\00ab\A0" "\A0\00bb"; /* 5 */ }
 
 /* Embedded content
 ------------------------------------------------------ */
@@ -280,27 +186,6 @@ td {
 
 /* Forms
 ------------------------------------------------------ */
-
-/*
- * Current browsers do not handle hyphens in the rules of art.
- * Remove hyphenation for input element.
- * 1. Chrome does not have hyphenation dictionary, 'hyphens' does not work.
- *    Alternatively, the 'word-break' property is initialized with the 
- *    "break-word" non-standard value.
- * 2. @css-for Safari 5.1+, iOS Safari 4.3+.
- * 3. @css-for Firefox 6+.
- * 4. @css-for Firefox IE 10+.
- * @see //css-tricks.com/almanac/properties/h/hyphenate
- */
-
-input {
-  word-wrap: normal; /* 1 */
-  -webkit-hyphens: none; /* 2 */
-     -moz-hyphens: none; /* 3 */
-      -ms-hyphens: none; /* 4 */
-       -o-hyphens: none;
-          hyphens: none;
-}
 
 /*
  * Fix vertical align.
