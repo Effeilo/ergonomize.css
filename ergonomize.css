@@ -71,6 +71,9 @@ html {
   -webkit-tap-highlight-color: transparent; /* 7 */
 }
 
+/* Various
+------------------------------------------------------ */
+
 /*
  * Remove text-shadow in selection highlight.
  * 1. @css-for Firefox 2+, Firefox for Android 33+.
@@ -86,16 +89,21 @@ html {
   text-shadow: none;
 }
 
-/* Grouping content
------------------------------------------------------- */
-
 /*
  * Prevents certain content from spilling their container.
  * 1. @bugfix * @affected IE 8.
  */
 
 blockquote,
-pre {
+code,
+img,
+input,
+pre,
+svg,
+table,
+td,
+textarea,
+video {
   max-width: 100%;
   width: auto; /* 1 */
 }
@@ -113,18 +121,14 @@ dfn[title] {
 }
 
 /*
- * 1. Prevents certain content from spilling their container.
- * 2. @bugfix * @affected IE 8.
- * 3. @bugfix * @affected IE.
- * 4. Display the text as it was written and line breaks so that 
+ * 1. @bugfix * @affected IE.
+ * 2. Display the text as it was written and line breaks so that 
  *    the text does not leave the block.
  */
 
 code {
-  max-width: 100%; /* 1 */
-  width: auto; /* 2 */
-  white-space: pre-line; /* 3 */
-  white-space: pre-wrap; /* 4 */
+  white-space: pre-line; /* 1 */
+  white-space: pre-wrap; /* 2 */
 }
 
 /* Embedded content
@@ -147,16 +151,10 @@ video {
 
 /*
  * 1. Preserves the aspect ratio.
- * 2. Prevents certain content from spilling their container.
- * 3. @bugfix * @affected IE 8.
  */
 
-img,
-svg,
-video {
+img {
   height: auto; /* 1 */
-  max-width: 100%; /* 2 */
-  width: auto; /* 3 */
 }
 
 /*
@@ -172,20 +170,6 @@ img::-moz-selection { /* 1 */
 
 img::selection { /* 2 */
   background-color: transparent;
-}
-
-/* Tables
------------------------------------------------------- */
-
-/*
- * Prevents certain content from spilling their container.
- * 1. @bugfix * @affected IE 8.
- */
-
-table,
-td {
-  max-width: 100%;
-  width: auto; /* 1 */
 }
 
 /* Forms
@@ -208,17 +192,6 @@ select {
 
 label {
   cursor: pointer;
-}
-
-/*
- * Prevents certain content from spilling their container.
- * 1. @bugfix * @affected IE 8.
- */
-
-input,
-textarea {
-  max-width: 100%;
-  width: auto; /* 1 */
 }
 
 /*
