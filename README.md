@@ -10,8 +10,6 @@ Ergonomize.css is a CSS file with the aim to bring some additional rules to html
 
 Ergonomize.css is a set of CSS rules gleaned here and there by browsing the many resources available in the community.
 
-It has been thought to be complementary to normalize.css, which harmonizes the default styles for HTML elements between different browsers.
-
 After normalizing the styles of HTML elements, we will add rules to them to improve usability.
 
 Keys elements it brings:
@@ -32,7 +30,6 @@ Keys elements it brings:
 Some things to keep in mind if you want to contribute:
 
 * Only html elements are declared in ergonomize.css (no addition of classes).
-* Ergonomize.css was thought to be complementary to [normalize.css](http://necolas.github.io/normalize.css/), the rules are the least altering it.
 * No formatting styles meet a theme.
 
 ## Acknowledgements
