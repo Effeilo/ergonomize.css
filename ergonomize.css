@@ -37,26 +37,26 @@
 
 /*
  * 1. Ensure the page always fills at least the entire height of the viewport.
- *
  * 2. Force scrollbars to always be visible to prevent awkward jumps when
  *    navigating between pages that do/do not have enough content to produce
  *    scrollbars naturally.
  * 3. @css-for some Firefox.
  * @see //css-tricks.com/snippets/css/force-vertical-scrollbar/
- *
- * 4. The content continues to scroll slightly after removal of the finger.
+ * 4. Displays auto-hiding scrollbars during mouse interactions 
+ *    and panning indicators during touch and keyboard interactions. 
+ *    @css-for Edge 12+, Internet Explorer 11- 
+ *    @see //www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
+ * 5. The content continues to scroll slightly after removal of the finger.
  *    on the screen.
  *    @css-for iOS 5.0+.
  * @see //css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
- *
- * 5. Fonts on OSX will look more consistent with other systems that do not
+ * 6. Fonts on OSX will look more consistent with other systems that do not
  *    render text using sub-pixel anti-aliasing.
  *    @css-for OSX.
  * @see http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
- *
- * 6. Remove the highlighting effect when "tapped" action on webkit.
+ * 7. Remove the highlighting effect when "tapped" action on webkit.
  *    @css-for Androids.
- * 7. @css-for some Androids.
+ * 8. @css-for some Androids.
  * @see //phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
  */
 
@@ -64,11 +64,12 @@ html {
   min-height: 100%; /* 1 */
   overflow-y: scroll; /* 2 */
   overflow: -moz-scrollbars-vertical; /* 3 */
-  -webkit-overflow-scrolling: touch; /* 4 */
-  -moz-osx-font-smoothing: grayscale; /* 5 */
-   -webkit-font-smoothing: antialiased; /* 5 */
-  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 6 */
-  -webkit-tap-highlight-color: transparent; /* 7 */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* 4 */
+  -webkit-overflow-scrolling: touch; /* 5 */
+  -moz-osx-font-smoothing: grayscale; /* 6 */
+   -webkit-font-smoothing: antialiased; /* 6 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 7 */
+  -webkit-tap-highlight-color: transparent; /* 8 */
 }
 
 /* Various
@@ -215,4 +216,22 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
+}
+
+/* Interactive
+------------------------------------------------------ */
+
+/* 
+ * Remove delay from tapping on clickable elements
+ */
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea {
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
 }
