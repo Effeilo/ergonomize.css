@@ -204,6 +204,20 @@ select {
 }
 
 /*
+ * 'x' appears on right of search input when text is entered. 
+ * This removes it and get rid of superfluous padding.
+ * @css-for Chrome.
+ * @see //css-tricks.com/webkit-html5-search-inputs/#comment-82432
+ */
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+/*
  * Makes you want to click a label.
  */
 
@@ -218,20 +232,6 @@ label {
 
 textarea {
   resize: vertical;
-}
-
-/*
- * 'x' appears on right of search input when text is entered. 
- * This removes it and get rid of superfluous padding.
- * @css-for Chrome.
- * @see //css-tricks.com/webkit-html5-search-inputs/#comment-82432
- */
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  display: none;
 }
 
 /* Interactive
