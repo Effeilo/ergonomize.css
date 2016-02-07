@@ -167,11 +167,11 @@ video {
 }
 
 /*
- * 1. Preserves the aspect ratio.
+ * Preserves the aspect ratio.
  */
 
 img {
-  height: auto; /* 1 */
+  height: auto;
 }
 
 /*
