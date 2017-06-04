@@ -1,8 +1,6 @@
-![Ergonomize.css v1.0.3](http://effeiloweb.fr/ergonomize.css/ergonomizecss.png)
+![Ergonomize.css v2.0.0](http://effeiloweb.fr/ergonomize.css/ergonomizecss.png)
 
-# ergonomize.css v1.0.3
-
-[Version FR](https://github.com/Effeilo/ergonomize.css/blob/master/README-FR.md)
+# ergonomize.css v2.0.0
 
 Ergonomize.css is a CSS file with the aim to bring some additional rules to html elements that improve the user experience without altering their default styles.
 
@@ -23,7 +21,6 @@ Keys elements it brings:
 
 * Download ergonomize.css.
 * Remove the rules that is useless for you.
-* Ideally place the code before the reset reload or after [normalize.css](http://necolas.github.io/normalize.css/).
 
 ## Contribute
 
@@ -37,6 +34,7 @@ Some things to keep in mind if you want to contribute:
 This file has been made with informations gleaned here and there by browsing the many resources available in the community :
 
 * [HTML5 Boilerplate](https://html5boilerplate.com/)
+* [Sanitize.css](https://jonathantneal.github.io/sanitize.css/)
 * [Knacss](http://www.knacss.com/)
 * [RöCSSti](http://rocssti.net/)
 * [Inuit CSS](https://github.com/inuitcss)

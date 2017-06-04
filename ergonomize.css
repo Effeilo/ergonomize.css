@@ -1,24 +1,15 @@
-/*! ergonomize.css v1.0.3 | github.com/Effeilo/ergonomize.css | @effeilo */
+/*! ergonomize.css v1.0.0 | github.com/Effeilo/ergonomize.css | @effeilo */
 
 /* Viewport
------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 /*
  * This module incorporates the basic principles of `meta viewport`
  * but respecting the writing standards CSS.
- * @css-for Windows 8 Snap Mode (don't support `meta viewport`)
- * @css-for IE 10+, IE mobile 10+, Opera mini 8
- * 1. @css-for IE 10+, IE mobile 10+.
- * 2. @css-for Opera mini 8.
+ * For Windows 8 Snap Mode (don't support `meta viewport`)
+ * 1. For IE 10+, IE mobile 10+.
+ * 2. For Opera mini 8.
  */
- 
-@-webkit-viewport {
-  width: device-width;
-}
-
-@-moz-viewport {
-  width: device-width;
-}
 
 @-ms-viewport {
   width: device-width; /* 1 */
@@ -28,94 +19,105 @@
   width: device-width; /* 2 */
 }
 
-@viewport {
-  width: device-width;
-}
-
-/* The root element
------------------------------------------------------- */
-
 /*
- * 1. Ensure the page always fills at least the entire height of the viewport.
- * 2. Force scrollbars to always be visible to prevent awkward jumps when
- *    navigating between pages that do/do not have enough content to produce
- *    scrollbars naturally.
- * 3. @css-for some Firefox.
- * @see //css-tricks.com/snippets/css/force-vertical-scrollbar/
- * 4. Displays auto-hiding scrollbars during mouse interactions 
- *    and panning indicators during touch and keyboard interactions. 
- *    @css-for Edge 12+, Internet Explorer 11- 
- *    @see //www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
- * 5. The content continues to scroll slightly after removal of the finger.
- *    on the screen.
- *    @css-for iOS 5.0+.
- * @see //css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/
- * 6. Fonts on OSX will look more consistent with other systems that do not
- *    render text using sub-pixel anti-aliasing.
- *    @css-for OSX.
- * @see http://maximilianhoffmann.com/posts/better-font-rendering-on-osx
- * 7. Remove the highlighting effect when "tapped" action on webkit.
- *    @css-for Androids.
- * 8. @css-for some Androids.
- * @see //phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
+ * Bugfix IE10 mobile (Lumia 920).
+ * timkadlec.com/2013/01/windows-phone-8-and-device-width/
  */
 
-html {
-  min-height: 100%; /* 1 */
-  overflow-y: scroll; /* 2 */
-  overflow: -moz-scrollbars-vertical; /* 3 */
-  -ms-overflow-style: -ms-autohiding-scrollbar; /* 4 */
-  -webkit-overflow-scrolling: touch; /* 5 */
-  -moz-osx-font-smoothing: grayscale; /* 6 */
-   -webkit-font-smoothing: antialiased; /* 6 */
-  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 7 */
-  -webkit-tap-highlight-color: transparent; /* 8 */
+@media screen and (max-width: 400px) {
+  @-ms-viewport {
+    width: 320px;
+  }
 }
 
-/* Various
------------------------------------------------------- */
+/* Selection
+---------------------------------------------------------------------------- */
 
 /*
  * Remove text-shadow in selection highlight.
- * 1. @css-for Firefox 2+, Firefox for Android 33+.
- * 2. @css-for IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
- * @see //twitter.com/miketaylr/status/12228805301
+ * 1. For Firefox 2+, Firefox for Android 33+.
+ * 2. For IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
+ * 0. Theme (Adapt the values to your project).
+ * twitter.com/miketaylr/status/12228805301
  */
 
-::-moz-selection { /* 1 */
-  text-shadow: none;
+::-moz-selection {
+  background: #b3d4fc; /* 0 */
+  color: #fff; /* 0 */
+  text-shadow: none; /* 1 */
 }
 
-::selection { /* 2 */
-  text-shadow: none;
+::selection {
+  background: #b3d4fc; /* 0 */
+  color: #fff; /* 0 */
+  text-shadow: none; /* 2 */
 }
+
+/* The root element
+---------------------------------------------------------------------------- */
 
 /*
- * Prevents certain content from spilling their container.
- * 1. @bugfix * @affected IE 8.
+ * 1. Changing the dimensioning of the box model for the `html` element.
+ * 2. Add the default cursor in all browsers. 
+ * 3. Set default font family to sans-serif.
+ * 4. Force scrollbars to always be visible to prevent awkward jumps when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 5. For some Firefox.
+ *    css-tricks.com/snippets/css/force-vertical-scrollbar/
+ * 6. Method of specifying the scrolling behavior for a scrolling box, when scrolling 
+ *    happens due to navigation or CSSOM scrolling APIs.
+ *    For Firefox 36+.
+ * 7. Displays auto-hiding scrollbars during mouse interactions 
+ *    and panning indicators during touch and keyboard interactions. 
+ *    For Edge 12+, Internet Explorer 11- 
+ *    www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
+ * 8. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ *    For OSX.
+ * 9. Remove the highlighting effect when "tapped" action on webkit.
+ *     For Androids.
+ * 10. For some Androids.
+ *     phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
+ * 11. Prevent iOS text size adjust after orientation change, without disabling
+ *     user zoom.
+ *     For iOS Safari 5.1+.
+ * 12. For IE Mobile 10+.
  */
 
-blockquote,
-code,
-img,
-input,
-pre,
-svg,
-table,
-td,
-textarea,
-video {
-  max-width: 100%;
-  width: auto; /* 1 */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
+  cursor: default; /* 2 */
+  font-family: sans-serif; /* 3 */
+  overflow-y: scroll; /* 4 */
+  overflow: -moz-scrollbars-vertical; /* 5 */
+  scroll-behavior: smooth; /* 6 */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* 7 */
+  -moz-osx-font-smoothing: grayscale; /* 8 */
+  -webkit-font-smoothing: antialiased; /* 8 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 9 */
+  -webkit-tap-highlight-color: transparent; /* 10 */
+  -webkit-text-size-adjust: 100%; /* 11 */
+  -ms-text-size-adjust: 100%; /* 12 */
 }
 
 /* Grouping content
------------------------------------------------------- */
+---------------------------------------------------------------------------- */
 
 /*
- * A better looking default horizontal rule
+ * Prevents certain content from spilling their container.
  */
- 
+
+blockquote,
+pre {
+  max-width: 100%;
+}
+
+/*
+ * A better looking default horizontal rule.
+ */
+
 hr {
   border: 0;
   border-top: 1px solid #ccc;
@@ -126,7 +128,20 @@ hr {
 }
 
 /* Text-level semantics
------------------------------------------------------- */
+---------------------------------------------------------------------------- */
+
+/* 
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove delay from tapping on clickable elements.
+ * 3. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent; /* 1 */
+  -ms-touch-action: manipulation;
+      touch-action: manipulation; /* 2 */
+  -webkit-text-decoration-skip: objects; /* 3 */
+}
 
 /*
  * Give a help cursor to elements that give extra info on `:hover`.
@@ -138,18 +153,25 @@ dfn[title] {
 }
 
 /*
- * 1. @bugfix * @affected IE.
- * 2. Display the text as it was written and line breaks so that 
- *    the text does not leave the block.
+ * Prevents certain content from spilling their container.
  */
 
 code {
-  white-space: pre-line; /* 1 */
-  white-space: pre-wrap; /* 2 */
+  max-width: 100%;
 }
 
 /* Embedded content
------------------------------------------------------- */
+---------------------------------------------------------------------------- */
+
+/* 
+ * Remove delay from tapping on clickable elements.
+ */
+
+area {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -189,8 +211,39 @@ img::selection { /* 2 */
   background-color: transparent;
 }
 
+/*
+ * Prevents certain content from spilling their container.
+ */
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+/*
+ * Change the fill color to match the text color in all browsers.
+ */
+
+svg {
+  fill: currentColor;
+}
+
 /* Forms
------------------------------------------------------- */
+---------------------------------------------------------------------------- */
+
+/*
+ * Remove the tapping delay from clickable elements.
+ */
+
+button,
+input,
+label,
+select,
+textarea {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
 
 /*
  * Fix vertical align.
@@ -204,17 +257,12 @@ select {
 }
 
 /*
- * 'x' appears on right of search input when text is entered. 
- * This removes it and get rid of superfluous padding.
- * @css-for Chrome.
- * @see //css-tricks.com/webkit-html5-search-inputs/#comment-82432
+ * Prevents certain content from spilling their container.
  */
 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  display: none;
+input,
+textarea {
+  max-width: 100%;
 }
 
 /*
@@ -226,28 +274,45 @@ label {
 }
 
 /*
+ * Specify the standard appearance of selects.
+ */
+
+/* For Firefox 40+, Chrome 45+ */
+
+select {
+  -moz-appearance: none; /* 1 */
+  -webkit-appearance: none; /* 2 */
+}
+
+/* For Edge 12+, Internet Explorer 11- */
+
+select::-ms-expand {
+  display: none;
+}
+
+/* For Edge 12+, Internet Explorer 11- */
+
+select::-ms-value {
+  color: currentColor;
+}
+
+/*
  * Allow only vertical resizing of textareas.
- * @css-for Firefox 5+, Chrome 4+, Safari 4+, opera 12.1+.
+ * For Firefox 5+, Chrome 4+, Safari 4+, opera 12.1+.
  */
 
 textarea {
   resize: vertical;
 }
 
-/* Interactive
------------------------------------------------------- */
+/* Tables
+---------------------------------------------------------------------------- */
 
-/* 
- * Remove delay from tapping on clickable elements
+/*
+ * Prevents certain content from spilling their container.
  */
 
-a,
-area,
-button,
-input,
-label,
-select,
-textarea {
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
+table,
+td {
+  max-width: 100%;
 }

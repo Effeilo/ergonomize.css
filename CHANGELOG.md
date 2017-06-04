@@ -1,3 +1,14 @@
+#### ergonomize.css v2.0.0 : Jun 4, 2017
+
+* Overall reorganization.
+* Overhauling the viewport module.
+* Overhauling the selection module.
+* Overhauling the `html` module.
+* Add `a` rules.
+* Remove `code` rules.
+* Add `svg` rules.
+* Add `select` rules.
+
 #### ergonomize.css v1.0.3 : April 9, 2015
 
 * Remove `q` rules.
