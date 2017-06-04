@@ -4,6 +4,8 @@
 
 Ergonomize.css is a CSS file aiming at bringing additional rules to html elements that improve the user experience without altering their default styles.
 
+* [The project Website](http://effeiloweb.fr/ergonomize.css/)
+
 ## Overview
 
 Ergonomize.css is a set of CSS rules gleaned here and there by browsing the many resources available in the community.
