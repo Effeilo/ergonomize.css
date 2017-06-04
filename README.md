@@ -1,8 +1,8 @@
-![Ergonomize.css v2.0.0](http://effeiloweb.fr/ergonomize.css/ergonomizecss.png)
+![Ergonomize.css v2.0.0](http://effeiloweb.fr/ergonomize.css/ergonomizecss-tall.png)
 
 # ergonomize.css v2.0.0
 
-Ergonomize.css is a CSS file with the aim to bring some additional rules to html elements that improve the user experience without altering their default styles.
+Ergonomize.css is a CSS file aiming at bringing additional rules to html elements that improve the user experience without altering their default styles.
 
 ## Overview
 
@@ -15,12 +15,11 @@ Keys elements it brings:
 * Allow the user to better understand somes elements of the site.
 * Optimize somes elements for responsive design.
 * Improve ergonomics for mobile and tablets.
-* Viewport.
 
 ## How to use it ?
 
 * Download ergonomize.css.
-* Remove the rules that is useless for you.
+* Romove rules you won’t need.
 
 ## Contribute
 
@@ -31,7 +30,7 @@ Some things to keep in mind if you want to contribute:
 
 ## Acknowledgements
 
-This file has been made with informations gleaned here and there by browsing the many resources available in the community :
+This file was made thanks to information gleaned here and there by browsing the many resources available in the community:
 
 * [HTML5 Boilerplate](https://html5boilerplate.com/)
 * [Sanitize.css](https://jonathantneal.github.io/sanitize.css/)
