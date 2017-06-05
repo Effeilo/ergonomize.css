@@ -7,7 +7,6 @@
 * Add `a` rules.
 * Remove `code` rules.
 * Add `svg` rules.
-* Add `select` rules.
 
 #### ergonomize.css v1.0.3 : April 9, 2015
 

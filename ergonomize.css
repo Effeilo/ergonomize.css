@@ -274,29 +274,6 @@ label {
 }
 
 /*
- * Specify the standard appearance of selects.
- */
-
-/* For Firefox 40+, Chrome 45+ */
-
-select {
-  -moz-appearance: none; /* 1 */
-  -webkit-appearance: none; /* 2 */
-}
-
-/* For Edge 12+, Internet Explorer 11- */
-
-select::-ms-expand {
-  display: none;
-}
-
-/* For Edge 12+, Internet Explorer 11- */
-
-select::-ms-value {
-  color: currentColor;
-}
-
-/*
  * Allow only vertical resizing of textareas.
  * For Firefox 5+, Chrome 4+, Safari 4+, opera 12.1+.
  */
