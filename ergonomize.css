@@ -57,49 +57,43 @@
 ---------------------------------------------------------------------------- */
 
 /*
- * 1. Changing the dimensioning of the box model for the `html` element.
- * 2. Add the default cursor in all browsers. 
- * 3. Set default font family to sans-serif.
- * 4. Force scrollbars to always be visible to prevent awkward jumps when
+ * 1. Set default font family to sans-serif.
+ * 2. Force scrollbars to always be visible to prevent awkward jumps when
  *    navigating between pages that do/do not have enough content to produce
  *    scrollbars naturally.
- * 5. For some Firefox.
+ * 3. For some Firefox.
  *    css-tricks.com/snippets/css/force-vertical-scrollbar/
- * 6. Method of specifying the scrolling behavior for a scrolling box, when scrolling 
- *    happens due to navigation or CSSOM scrolling APIs.
+ * 4. Defines a smooth scroll effect to the scrolling behavior for a scrolling box, 
+ *    when scrolling happens due to navigation or CSSOM scrolling APIs.
  *    For Firefox 36+.
- * 7. Displays auto-hiding scrollbars during mouse interactions 
+ * 5. Displays auto-hiding scrollbars during mouse interactions 
  *    and panning indicators during touch and keyboard interactions. 
  *    For Edge 12+, Internet Explorer 11- 
- *    www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
- * 8. Fonts on OSX will look more consistent with other systems that do not
+ * 6. Fonts on OSX will look more consistent with other systems that do not
  *    render text using sub-pixel anti-aliasing.
  *    For OSX.
- * 9. Remove the highlighting effect when "tapped" action on webkit.
- *     For Androids.
- * 10. For some Androids.
- *     phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
- * 11. Prevent iOS text size adjust after orientation change, without disabling
- *     user zoom.
- *     For iOS Safari 5.1+.
- * 12. For IE Mobile 10+.
+ * 7. Remove the highlighting effect when "tapped" action on webkit.
+ *    For Androids.
+ * 8. For some Androids.
+ *    phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
+ * 9. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ *    For iOS Safari 5.1+.
+ * 10. For IE Mobile 10+.
  */
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
-  cursor: default; /* 2 */
-  font-family: sans-serif; /* 3 */
-  overflow-y: scroll; /* 4 */
-  overflow: -moz-scrollbars-vertical; /* 5 */
-  scroll-behavior: smooth; /* 6 */
-  -ms-overflow-style: -ms-autohiding-scrollbar; /* 7 */
-  -moz-osx-font-smoothing: grayscale; /* 8 */
-  -webkit-font-smoothing: antialiased; /* 8 */
-  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 9 */
-  -webkit-tap-highlight-color: transparent; /* 10 */
-  -webkit-text-size-adjust: 100%; /* 11 */
-  -ms-text-size-adjust: 100%; /* 12 */
+  font-family: sans-serif; /* 1 */
+  overflow-y: scroll; /* 2 */
+  overflow: -moz-scrollbars-vertical; /* 3 */
+  scroll-behavior: smooth; /* 4 */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* 5 */
+  -moz-osx-font-smoothing: grayscale; /* 6 */
+  -webkit-font-smoothing: antialiased; /* 6 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 7 */
+  -webkit-tap-highlight-color: transparent; /* 8 */
+  -webkit-text-size-adjust: 100%; /* 9 */
+  -ms-text-size-adjust: 100%; /* 10 */
 }
 
 /* Grouping content
@@ -131,9 +125,10 @@ hr {
 ---------------------------------------------------------------------------- */
 
 /* 
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove delay from tapping on clickable elements.
- * 3. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ * 1. Removes the gray background on active links in IE 10.
+ * 2. Removes delay from tapping on clickable elements.
+ *    www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
+ * 3. Removes gaps in links underline in iOS 8+ and Safari 8+.
  */
 
 a {
@@ -164,7 +159,8 @@ code {
 ---------------------------------------------------------------------------- */
 
 /* 
- * Remove delay from tapping on clickable elements.
+ * Removes delay from tapping on clickable elements.
+ * www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
  */
 
 area {
@@ -176,7 +172,7 @@ area {
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers.
- * @see: //github.com/h5bp/html5-boilerplate/issues/440
+ * //github.com/h5bp/html5-boilerplate/issues/440
  */
 
 audio,
@@ -198,9 +194,9 @@ img {
 
 /*
  * Disable highlight on image when select and drag it with the mouse.
- * 1. @css-for Firefox 2+, Firefox for Android 33+.
- * 2. @css-for IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
- * @see: //stackoverflow.com/questions/6816080/how-to-disable-highlight-on-a-image
+ * 1. For Firefox 2+, Firefox for Android 33+.
+ * 2. For IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
+ * //stackoverflow.com/questions/6816080/how-to-disable-highlight-on-a-image
  */
 
 img::-moz-selection { /* 1 */
@@ -234,6 +230,7 @@ svg {
 
 /*
  * Remove the tapping delay from clickable elements.
+ * www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
  */
 
 button,
