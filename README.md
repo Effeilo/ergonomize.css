@@ -1,4 +1,4 @@
-![Ergonomize.css v2.0.0](http://effeiloweb.fr/ergonomize.css/ergonomizecss-tall-compressor.png)
+![Ergonomize.css v2.0.0](http://www.ergonomizecss.com/ergonomizecss-tall-compressor.png)
 
 # ergonomize.css v2.0.0
 
