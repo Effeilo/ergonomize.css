@@ -14,8 +14,8 @@ After normalizing the styles of HTML elements, we will add rules to them to impr
 
 Keys elements it brings:
 
-* Allow the user to better understand somes elements of the site.
-* Optimize somes elements for responsive design.
+* Allow the user to better understand somes elements of the site,
+* Optimize somes elements for responsive design,
 * Improve ergonomics for mobile and tablets.
 
 ## How to use it ?
@@ -27,16 +27,16 @@ Keys elements it brings:
 
 Some things to keep in mind if you want to contribute:
 
-* Only html elements are declared in ergonomize.css (no addition of classes).
+* Only html elements are declared in ergonomize.css (no addition of classes),
 * No formatting styles meet a theme.
 
 ## Acknowledgements
 
 This file was made thanks to information gleaned here and there by browsing the many resources available in the community:
 
-* [HTML5 Boilerplate](https://html5boilerplate.com/)
-* [Sanitize.css](https://jonathantneal.github.io/sanitize.css/)
-* [Knacss](http://www.knacss.com/)
-* [RöCSSti](http://rocssti.net/)
-* [Inuit CSS](https://github.com/inuitcss)
+* [HTML5 Boilerplate](https://html5boilerplate.com/),
+* [Sanitize.css](https://jonathantneal.github.io/sanitize.css/),
+* [Knacss](http://www.knacss.com/),
+* [RöCSSti](http://rocssti.net/),
+* [Inuit CSS](https://github.com/inuitcss),
 * ...
