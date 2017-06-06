@@ -22,7 +22,7 @@ Main Features:
 ## How to use it ?
 
 * Download ergonomize.css.
-* Romove rules you won’t need.
+* Remove rules you won’t need.
 
 ## Contribute
 
