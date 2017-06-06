@@ -2,7 +2,7 @@
 
 # Documentation
 
-Ergonomize.css is a CSS file aiming at bringing additional rules to html elements that improve the user experience without altering their default styles.
+Ergonomize.css is a CSS file aiming at bringing additional rules to HTML elements without altering their default styles in order to improve the user experience.
 
 * [The project Website](http://www.ergonomizecss.com/)
 
@@ -14,7 +14,7 @@ Using `device-width` improves user experience on mobile devices and tablets. We 
 <meta name="viewport" content="width=device-width">
 ```
 
-This module incorporates the basic principles of meta viewport but respecting the writing standards CSS.
+This module incorporates the basic principles of meta viewport while respecting the CSS standards.
 
 `@viewport` is very little supported by browsers at the moment, it remains however useful for Windows 8 Snap Mode, which does not support the meta viewport.
 
@@ -48,7 +48,7 @@ This part fixes a bug for IE10 mobile on Lunia 920.
 
 ## Selection
 
-This part removes a possible default shadow of text during a selection, making the text unreadable according to the background color of the selected text.
+Removes a possible default text shadow during selection, making content unreadable depending on the background color of the selected text.
 
 ```css
 /*
@@ -69,14 +69,14 @@ This part removes a possible default shadow of text during a selection, making t
 }
 ```
 
-These selection rule sets have to be separate and you must define the `background` property when you declare `::selection` in a CSS file. Adapt `background` and `color` values to your project.
+These selection rule sets have to be separate and the `background` property must be defined when declaring `::selection` in a CSS file. Feel free to adapt `background` and `color` values to your project.
 
 * [Bug fix source: Mike Taylor](https://twitter.com/miketaylr/status/12228805301)
 * [::selection browsers support](http://caniuse.com/#feat=css-selection)
 
 ## The root element
 
-On the screen, the default `sans-serif` typo is often more readable than the default `serif` typo.
+On screen, relying on `sans-serif` is often more readable than the default `serif` font face.
 
 ```css
 html {
@@ -84,7 +84,7 @@ html {
 }
 ```
 
-Force scrollbars to always be visible to prevent awkward jumps when navigating between pages that do/do not have enough content to produce scrollbars naturally.
+Forces scrollbars to always be visible to prevent awkward jumps when navigating between pages that do/do not have enough content to produce scrollbars naturally.
 
 ```css
 /*
@@ -124,7 +124,7 @@ html {
 }
 ```
 
-Removes the highlighting effect when "tapped" action on webkit.
+Removes the highlighting effect of “tap” actions on WebKit.
 
 ```css
 /*
@@ -198,7 +198,7 @@ a {
 
 * [Click delay mobile devices trick source](https://www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/)
 
-Give a help cursor to elements that give extra info on `:hover`.
+Gives a help cursor to elements that give extra info on `:hover`.
 
 ```css
 abbr[title],
@@ -217,7 +217,7 @@ code {
 
 ## Embedded content
 
-Remove delay from tapping on `area`.
+Removes delay from tapping on `area`.
 
 ```css
 area {
@@ -228,7 +228,7 @@ area {
 
 * [Click delay mobile devices trick source](https://www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/)
 
-Remove the gap between `audio`, `canva`, `iframe`, `image`, `video` and the bottom of their containers.
+Removes the gap between `audio`, `canvas`, `iframe`, `image`, `video` elements and the bottom of their container.
 
 ```css
 audio,
@@ -251,7 +251,7 @@ img {
 }
 ```
 
-Disable highlight on image when select and drag it with the mouse.
+Disables highlight on image when selecting and dragging it with the mouse.
 
 ```css
 /*
@@ -280,7 +280,7 @@ video {
 }
 ```
 
-Change the fill color to match the text color in all browsers.
+Changes the fill color to match the text color in all browsers.
 
 ```css
 svg {
@@ -290,7 +290,7 @@ svg {
 
 ## Forms
 
-Remove delay from tapping on `button`, `input`, `label`, `select` and `textarea`.
+Removes delay from tapping on `button`, `input`, `label`, `select` and `textarea` elements.
 
 ```css
 button,
@@ -305,7 +305,7 @@ textarea {
 
 * [Click delay mobile devices trick source](https://www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/)
 
-Fix vertical align for form elements.
+Fixes vertical align for form elements.
 
 ```css
 button,
@@ -333,7 +333,7 @@ label {
 }
 ```
 
-Allow only vertical resizing of `textarea`.
+Allows only vertical resizing of `textarea`.
 
 ```css
 textarea {
