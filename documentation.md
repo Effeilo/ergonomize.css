@@ -1,4 +1,4 @@
-![Ergonomize.css v2.0.0](http://www.ergonomizecss.com/ergonomizecss-tall-compressor.png)
+![Ergonomize.css v2.1.2](http://www.ergonomizecss.com/ergonomizecss-tall-compressor.png)
 
 # Documentation
 
@@ -207,11 +207,18 @@ dfn[title] {
 }
 ```
 
-Prevents `code` content from spilling their container.
+Display for `code` the text as it was written and line breaks so that text does not leave the block and prevents `code` content from spilling their container.
 
 ```css
+/*
+ * 1. Display the text as it was written and line breaks so that 
+ *    the text does not leave the block.
+ * 2. Prevents certain content from spilling their container.
+ */
+
 code {
-  max-width: 100%;
+  white-space: pre-wrap; /* 1 */
+  max-width: 100%; /* 2 */
 }
 ```
 
@@ -290,16 +297,23 @@ svg {
 
 ## Forms
 
+Gives a pointer cursor to clickable forms elements.
+
+```css
+label {
+  cursor: pointer;
+}
+```
+
 Removes delay from tapping on `button`, `input`, `label`, `select` and `textarea` elements.
 
 ```css
 button,
-input,
-label,
-select,
-textarea {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
+input[type='image'],
+input[type='submit'], 
+label[for],
+select {
+  cursor: pointer;
 }
 ```
 
@@ -322,14 +336,6 @@ Prevents `input` and `textarea` content from spilling their container.
 input,
 textarea {
   max-width: 100%;
-}
-```
-
-Makes you want to click a `label`.
-
-```css
-label {
-  cursor: pointer;
 }
 ```
 

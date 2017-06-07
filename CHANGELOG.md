@@ -1,3 +1,9 @@
+#### ergonomize.css v2.1.2 : Jun 7, 2017
+
+* Add documentation.
+* Display the text as it was written and line breaks so that the text does not leave the block for `code`.
+* Gives a pointer cursor to clickable forms elements.
+
 #### ergonomize.css v2.0.0 : Jun 4, 2017
 
 * Overall reorganization.

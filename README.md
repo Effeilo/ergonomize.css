@@ -1,6 +1,6 @@
-![Ergonomize.css v2.0.0](http://www.ergonomizecss.com/ergonomizecss-tall-compressor.png)
+![Ergonomize.css v2.1.2](http://www.ergonomizecss.com/ergonomizecss-tall-compressor.png)
 
-# ergonomize.css v2.0.0
+# ergonomize.css v2.1.2
 
 Ergonomize.css is a CSS file aiming to bring additional rules for html elements to improve the user experience without altering their default styles.
 
