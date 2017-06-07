@@ -210,15 +210,9 @@ dfn[title] {
 Display for `code` the text as it was written and line breaks so that text does not leave the block and prevents `code` content from spilling their container.
 
 ```css
-/*
- * 1. Display the text as it was written and line breaks so that 
- *    the text does not leave the block.
- * 2. Prevents certain content from spilling their container.
- */
-
 code {
-  white-space: pre-wrap; /* 1 */
-  max-width: 100%; /* 2 */
+  white-space: pre-wrap;
+  max-width: 100%;
 }
 ```
 
@@ -300,7 +294,11 @@ svg {
 Gives a pointer cursor to clickable forms elements.
 
 ```css
-label {
+button,
+input[type='image'],
+input[type='submit'], 
+label[for],
+select {
   cursor: pointer;
 }
 ```
@@ -309,11 +307,12 @@ Removes delay from tapping on `button`, `input`, `label`, `select` and `textarea
 
 ```css
 button,
-input[type='image'],
-input[type='submit'], 
-label[for],
-select {
-  cursor: pointer;
+input,
+label,
+select,
+textarea {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
 }
 ```
 
