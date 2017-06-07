@@ -1,4 +1,4 @@
-/*! ergonomize.css v2.0.0 | github.com/Effeilo/ergonomize.css | @effeilo */
+/*! ergonomize.css v2.1.2 | github.com/Effeilo/ergonomize.css | @effeilo */
 
 /* Viewport
 ---------------------------------------------------------------------------- */
@@ -148,11 +148,14 @@ dfn[title] {
 }
 
 /*
- * Prevents certain content from spilling their container.
+ * 1. Display the text as it was written and line breaks so that 
+ *    the text does not leave the block.
+ * 2. Prevents certain content from spilling their container.
  */
 
 code {
-  max-width: 100%;
+  white-space: pre-wrap; /* 1 */
+  max-width: 100%; /* 2 */
 }
 
 /* Embedded content
@@ -167,7 +170,6 @@ area {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
 }
-
 
 /*
  * Remove the gap between audio, canvas, iframes,
@@ -229,6 +231,18 @@ svg {
 ---------------------------------------------------------------------------- */
 
 /*
+ * Gives a pointer cursor to clickable forms elements.
+ */
+
+button,
+input[type='image'],
+input[type='submit'], 
+label[for],
+select {
+  cursor: pointer;
+}
+
+/*
  * Remove the tapping delay from clickable elements.
  * www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
  */
@@ -260,14 +274,6 @@ select {
 input,
 textarea {
   max-width: 100%;
-}
-
-/*
- * Makes you want to click a label.
- */
-
-label {
-  cursor: pointer;
 }
 
 /*
