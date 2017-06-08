@@ -1,3 +1,7 @@
+#### In progress
+
+* Simplification of versioning.
+
 #### ergonomize.css v2.1.2 : Jun 7, 2017
 
 * Add documentation.
