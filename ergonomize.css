@@ -1,4 +1,4 @@
-/*! ergonomize.css v2.1 | github.com/Effeilo/ergonomize.css | @effeilo */
+/*! ergonomize.css v3.0 | github.com/Effeilo/ergonomize.css | @effeilo */
 
 /* Viewport
 ---------------------------------------------------------------------------- */
@@ -6,28 +6,16 @@
 /*
  * This module incorporates the basic principles of `meta viewport`
  * but respecting the writing standards CSS.
- * For Windows 8 Snap Mode (don't support `meta viewport`)
- * 1. For IE 10+, IE mobile 10+.
- * 2. For Opera mini 8.
+ * 1. For Edge 79-.
+ * 2. For Edge 80+.
  */
 
 @-ms-viewport {
   width: device-width; /* 1 */
 }
 
-@-o-viewport {
-  width: device-width; /* 2 */
-}
-
-/*
- * Bugfix IE10 mobile (Lumia 920).
- * timkadlec.com/2013/01/windows-phone-8-and-device-width/
- */
-
-@media screen and (max-width: 400px) {
-  @-ms-viewport {
-    width: 320px;
-  }
+@-webkit-viewport {
+  width: device-width; /* 3 */
 }
 
 /* Selection
@@ -36,7 +24,7 @@
 /*
  * Remove text-shadow in selection highlight.
  * 1. For Firefox 2+, Firefox for Android 33+.
- * 2. For IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
+ * 2. For Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+.
  * 0. Theme (Adapt the values to your project).
  * twitter.com/miketaylr/status/12228805301
  */
@@ -68,7 +56,7 @@
  *    For Firefox 36+.
  * 5. Displays auto-hiding scrollbars during mouse interactions 
  *    and panning indicators during touch and keyboard interactions. 
- *    For Edge 12+, Internet Explorer 11- 
+ *    For Edge 12+
  * 6. Fonts on OSX will look more consistent with other systems that do not
  *    render text using sub-pixel anti-aliasing.
  *    For OSX.
@@ -79,7 +67,6 @@
  * 9. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  *    For iOS Safari 5.1+.
- * 10. For IE Mobile 10+.
  */
 
 html {
@@ -93,7 +80,6 @@ html {
   -webkit-tap-highlight-color: rgba(0,0,0,0); /* 7 */
   -webkit-tap-highlight-color: transparent; /* 8 */
   -webkit-text-size-adjust: 100%; /* 9 */
-  -ms-text-size-adjust: 100%; /* 10 */
 }
 
 /* Grouping content
@@ -125,14 +111,12 @@ hr {
 ---------------------------------------------------------------------------- */
 
 /* 
- * 1. Removes the gray background on active links in IE 10.
  * 2. Removes delay from tapping on clickable elements.
  *    www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
  * 3. Removes gaps in links underline in iOS 8+ and Safari 8+.
  */
 
 a {
-  background-color: transparent; /* 1 */
   -ms-touch-action: manipulation;
       touch-action: manipulation; /* 2 */
   -webkit-text-decoration-skip: objects; /* 3 */
@@ -197,7 +181,7 @@ img {
 /*
  * Disable highlight on image when select and drag it with the mouse.
  * 1. For Firefox 2+, Firefox for Android 33+.
- * 2. For IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
+ * 2. For Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+.
  * //stackoverflow.com/questions/6816080/how-to-disable-highlight-on-a-image
  */
 
