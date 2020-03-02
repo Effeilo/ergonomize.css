@@ -1,7 +1,7 @@
 #### ergonomize.css v3.0 : March 3, 2020
 
 * Remove IE support.
-* Remove `@viewport` rules for Opera (no longer supports @viewport).
+* Remove `@viewport` rules for Opera (Opera no longer supports @viewport).
 
 #### ergonomize.css v2.1 : Jun 8, 2017
 
