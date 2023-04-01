@@ -1,4 +1,4 @@
-![Ergonomize.css v4.0](https://www.ergonomizecss.com/assets/medias/images/ergonomizecss-banner-doc-github.webp)
+![Ergonomize.css v4.0](https://www.ergonomizecss.com/assets/medias/images/ergonomizecss-banner-doc-github-big.webp)
 
 # Documentation
 
