@@ -6,66 +6,38 @@ Ergonomize.css is a CSS file aiming at bringing additional rules to HTML element
 
 * [The project Website](https://www.ergonomizecss.com/)
 
-## Viewport
+## Scroll Behavior
 
-Using `device-width` improves user experience on mobile devices and tablets. We currently use a meta tag:
-
-```html
-<meta name="viewport" content="width=device-width">
-```
-
-This module incorporates the basic principles of meta viewport while respecting the CSS standards.
-
-`@viewport` is very little supported by browsers at the moment, it remains however useful for Windows 8 Snap Mode, which does not support the meta viewport.
+If the user has not requested the system to minimize the amount  of animation or movement, Defines a smooth scroll effect to the scrolling behavior for a scrolling box, when scrolling happens due to navigation or CSSOM scrolling APIs.
 
 ```css
-/*
- * 1. For IE 10+, IE mobile 10+.
- * 2. For Opera mini 8.
- */
-
-@-ms-viewport {
-  width: device-width; /* 1 */
-}
-
-@-o-viewport {
-  width: device-width; /* 2 */
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth; 
+    }
 }
 ```
-
-This part fixes a bug for IE10 mobile on Lunia 920.
-
-```css
-@media screen and (max-width: 400px) {
-  @-ms-viewport {
-    width: 320px;
-  }
-}
-```
-
-* [Bug fix source: Tim Kadlec](https://timkadlec.com/2013/01/windows-phone-8-and-device-width/)
-* [@viewport browsers support](https://caniuse.com/#feat=css-deviceadaptation)
 
 ## Selection
 
-Removes a possible default text shadow during selection, making content unreadable depending on the background color of the selected text.
+This part removes a possible default shadow of text during a selection, making the text unreadable according to the background color of the selected text.
 
 ```css
-/*
+/**
  * 1. For Firefox 2+, Firefox for Android 33+.
- * 2. For IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
+ * 2. For Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+.
  */
 
 ::-moz-selection {
-  background: #b3d4fc;
-  color: #fff;
-  text-shadow: none; /* 1 */
+    background: #b3d4fc;
+    color: #fff;
+    text-shadow: none; /* 1 */
 }
 
 ::selection {
-  background: #b3d4fc;
-  color: #fff;
-  text-shadow: none; /* 2 */
+    background: #b3d4fc;
+    color: #fff;
+    text-shadow: none; /* 2 */
 }
 ```
 
@@ -76,34 +48,31 @@ These selection rule sets have to be separate and the `background` property must
 
 ## The root element
 
-On screen, relying on `sans-serif` is often more readable than the default `serif` font face.
+Improve consistency of default fonts in all browsers (often more readable than the default `serif` typo).
 
 ```css
 html {
-  font-family: sans-serif;
+    font-family: system-ui, 
+                'Segoe UI', 
+                 Roboto, 
+                 Helvetica, 
+                 Arial, 
+                 sans-serif, 
+                'Apple Color Emoji', 
+                'Segoe UI Emoji';
 }
 ```
 
 Forces scrollbars to always be visible to prevent awkward jumps when navigating between pages that do/do not have enough content to produce scrollbars naturally.
 
 ```css
-/*
+/**
  * 1. For some Firefox.
  */
 
 html {
-  overflow-y: scroll;
-  overflow: -moz-scrollbars-vertical; /* 1 */
-}
-```
-
-* [Force scrollbars trick source](https://css-tricks.com/snippets/css/force-vertical-scrollbar/)
-
-Defines a smooth scroll effect to the scrolling behavior for a scrolling box, when scrolling happens due to navigation or CSSOM scrolling APIs.
-
-```css
-html {
-  scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-vertical; /* 1 */
 }
 ```
 
@@ -111,7 +80,7 @@ Displays auto-hiding scrollbars during mouse interactions and panning indicators
 
 ```css
 html {
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 ```
 
@@ -119,22 +88,22 @@ Fonts on OSX will look more consistent with other systems that do not render tex
 
 ```css
 html {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 ```
 
 Removes the highlighting effect of “tap” actions on WebKit.
 
 ```css
-/*
+/**
  * 1. For Androids.
  * 2. For some Androids.
  */ 
 
 html {
-  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 1 */
-  -webkit-tap-highlight-color: transparent; /* 2 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* 1 */
+    -webkit-tap-highlight-color: transparent; /* 2 */
 }
 ```
 
@@ -143,14 +112,8 @@ html {
 Prevents iOS text size adjust after orientation change, without disabling user zoom.
 
 ```css
-/*
- * 1. For iOS Safari 5.1+.
- * 2. For IE Mobile 10+.
- */
-
 html {
-  -webkit-text-size-adjust: 100%; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%;
 }
 ```
 
@@ -161,7 +124,7 @@ Prevents `blockquote` and `pre` content from spilling their container.
 ```css
 blockquote,
 pre {
-  max-width: 100%;
+    max-width: 100%;
 }
 ```
 
@@ -169,30 +132,24 @@ Adds a better looking default horizontal rule.
 
 ```css
 hr {
-  border: 0;
-  border-top: 1px solid #ccc;
-  display: block;
-  height: 1px;
-  margin: 1em 0;
-  padding: 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
 }
 ```
 
 ## Text-level semantics
 
-Removes the gray background on active links in IE 10, removes delay from tapping on links and removes gaps in links underline in iOS 8+ and Safari 8+.
+Removes delay from tapping on links and removes gaps in links underline in iOS 8+ and Safari 8+.
 
 ```css
-/* 
- * 1. For IE 10.
- * 2. For iOS 8+ and Safari 8+.
- */
-
 a {
-  background-color: transparent; /* 1 */
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  -webkit-text-decoration-skip: objects; /* 2 */
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+    -webkit-text-decoration-skip: objects; /* 2 */
 }
 ```
 
@@ -203,7 +160,7 @@ Gives a help cursor to elements that give extra info on `:hover`.
 ```css
 abbr[title],
 dfn[title] {
-  cursor: help;
+    cursor: help;
 }
 ```
 
@@ -211,8 +168,8 @@ Display for `code` the text as it was written and line breaks so that text does 
 
 ```css
 code {
-  white-space: pre-wrap;
-  max-width: 100%;
+    white-space: pre-wrap;
+    max-width: 100%;
 }
 ```
 
@@ -222,8 +179,8 @@ Removes delay from tapping on `area`.
 
 ```css
 area {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
+    -ms-touch-action: manipulation;
+     touch-action: manipulation;
 }
 ```
 
@@ -238,7 +195,7 @@ iframe,
 img,
 svg,
 video {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 ```
 
@@ -248,24 +205,24 @@ Preserves the aspect ratio on image.
 
 ```css
 img {
-  height: auto;
+    height: auto;
 }
 ```
 
 Disables highlight on image when selecting and dragging it with the mouse.
 
 ```css
-/*
+/**
  * 1. For Firefox 2+, Firefox for Android 33+.
- * 2. For IE 9+, Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+, IE Mobile.
+ * 2. For Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+.
  */
 
 img::-moz-selection { /* 1 */
-  background-color: transparent;
+    background-color: transparent;
 }
 
 img::selection { /* 2 */
-  background-color: transparent;
+    background-color: transparent;
 }
 ```
 
@@ -277,7 +234,7 @@ Prevents `img`, `svg` and `video` content from spilling their container.
 img,
 svg,
 video {
-  max-width: 100%;
+    max-width: 100%;
 }
 ```
 
@@ -285,7 +242,7 @@ Changes the fill color to match the text color in all browsers.
 
 ```css
 svg {
-  fill: currentColor;
+    fill: currentColor;
 }
 ```
 
@@ -294,12 +251,13 @@ svg {
 Gives a pointer cursor to clickable forms elements.
 
 ```css
-button,
-input[type='image'],
-input[type='submit'], 
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled),
 label[for],
 select {
-  cursor: pointer;
+    cursor: pointer;
 }
 ```
 
@@ -311,8 +269,8 @@ input,
 label,
 select,
 textarea {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
 }
 ```
 
@@ -325,7 +283,7 @@ button,
 input,
 label,
 select {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 ```
 
@@ -334,7 +292,7 @@ Prevents `input` and `textarea` content from spilling their container.
 ```css
 input,
 textarea {
-  max-width: 100%;
+    max-width: 100%;
 }
 ```
 
@@ -342,7 +300,7 @@ Allows only vertical resizing of `textarea`.
 
 ```css
 textarea {
-  resize: vertical;
+    resize: vertical;
 }
 ```
 
@@ -353,6 +311,6 @@ Prevents `table` and `td` content from spilling their container.
 ```css
 table,
 td {
-  max-width: 100%;
+    max-width: 100%;
 }
 ```
