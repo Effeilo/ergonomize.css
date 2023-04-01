@@ -1,10 +1,10 @@
-![Ergonomize.css v2.1](http://www.ergonomizecss.com/ergonomizecss-tall.png)
+![Ergonomize.css v4.0](https://www.ergonomizecss.com/assets/medias/images/ergonomizecss-banner-doc-github.webp)
 
 # Documentation
 
 Ergonomize.css is a CSS file aiming at bringing additional rules to HTML elements without altering their default styles in order to improve the user experience.
 
-* [The project Website](http://www.ergonomizecss.com/)
+* [The project Website](https://www.ergonomizecss.com/)
 
 ## Viewport
 
@@ -44,7 +44,7 @@ This part fixes a bug for IE10 mobile on Lunia 920.
 ```
 
 * [Bug fix source: Tim Kadlec](https://timkadlec.com/2013/01/windows-phone-8-and-device-width/)
-* [@viewport browsers support](http://caniuse.com/#feat=css-deviceadaptation)
+* [@viewport browsers support](https://caniuse.com/#feat=css-deviceadaptation)
 
 ## Selection
 
@@ -72,7 +72,7 @@ Removes a possible default text shadow during selection, making content unreadab
 These selection rule sets have to be separate and the `background` property must be defined when declaring `::selection` in a CSS file. Feel free to adapt `background` and `color` values to your project.
 
 * [Bug fix source: Mike Taylor](https://twitter.com/miketaylr/status/12228805301)
-* [::selection browsers support](http://caniuse.com/#feat=css-selection)
+* [::selection browsers support](https://caniuse.com/#feat=css-selection)
 
 ## The root element
 
@@ -138,7 +138,7 @@ html {
 }
 ```
 
-* [Trick source](http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html)
+* [Trick source](https://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html)
 
 Prevents iOS text size adjust after orientation change, without disabling user zoom.
 

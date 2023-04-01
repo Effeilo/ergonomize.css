@@ -1,7 +1,12 @@
+#### ergonomize.css v4.0 : April 1, 2023
+
+* Remove `@viewport` (no longer supports).
+* Change `font-family` on `body` to improve consistency of default fonts in all browsers.
+* Change the implementation method of `scroll-behavior` for more accessibility
+
 #### ergonomize.css v3.0 : March 3, 2020
 
 * Remove IE support.
-* Remove `@viewport` rules for Opera (Opera no longer supports @viewport).
 
 #### ergonomize.css v2.1 : Jun 8, 2017
 

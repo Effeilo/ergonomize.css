@@ -1,10 +1,10 @@
-![Ergonomize.css v2.1](http://www.ergonomizecss.com/ergonomizecss-tall.png)
+![Ergonomize.css v4.0](https://www.ergonomizecss.com/assets/medias/images/ergonomizecss-banner-github.webp)
 
-# ergonomize.css v2.1
+# ergonomize.css v4.0
 
 Ergonomize.css is a CSS file aiming to bring additional rules for html elements to improve the user experience without altering their default styles.
 
-* [The project Website](http://www.ergonomizecss.com/)
+* [The project Website](https://www.ergonomizecss.com/)
 * [The documentation](https://github.com/Effeilo/ergonomize.css/blob/master/documentation.md)
 
 ## Overview

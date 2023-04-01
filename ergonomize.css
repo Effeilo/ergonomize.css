@@ -1,27 +1,27 @@
-/*! ergonomize.css v3.0 | github.com/Effeilo/ergonomize.css | 2020 @effeilo */
+/*! ergonomize.css v4.0 | github.com/Effeilo/ergonomize.css | MIT Licence 2023 @effeilo */
 
-/* Viewport
+/* Scroll Behavior
 ---------------------------------------------------------------------------- */
 
-/*
- * This module incorporates the basic principles of `meta viewport`
- * but respecting the writing standards CSS.
- * 1. For Edge 79-.
- * 2. For Edge 80+.
+/**
+ * 1. If the user has not requested the system to minimize the amount 
+      of animation or movement,
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+ * 2. Defines a smooth scroll effect to the scrolling behavior for a scrolling box, 
+ *    when scrolling happens due to navigation or CSSOM scrolling APIs.
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior
  */
 
-@-ms-viewport {
-  width: device-width; /* 1 */
-}
-
-@-webkit-viewport {
-  width: device-width; /* 3 */
+@media (prefers-reduced-motion: no-preference) { /* 1 */
+  :root {
+    scroll-behavior: smooth; /* 2 */
+  }
 }
 
 /* Selection
 ---------------------------------------------------------------------------- */
 
-/*
+/**
  * Remove text-shadow in selection highlight.
  * 1. For Firefox 2+, Firefox for Android 33+.
  * 2. For Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+.
@@ -44,48 +44,45 @@
 /* The root element
 ---------------------------------------------------------------------------- */
 
-/*
- * 1. Set default font family to sans-serif.
+/**
+ * 1. Improve consistency of default fonts in all browsers. 
+      https://github.com/sindresorhus/modern-normalize/issues/3
  * 2. Force scrollbars to always be visible to prevent awkward jumps when
  *    navigating between pages that do/do not have enough content to produce
  *    scrollbars naturally.
  * 3. For some Firefox.
  *    css-tricks.com/snippets/css/force-vertical-scrollbar/
- * 4. Defines a smooth scroll effect to the scrolling behavior for a scrolling box, 
- *    when scrolling happens due to navigation or CSSOM scrolling APIs.
- *    For Firefox 36+.
- * 5. Displays auto-hiding scrollbars during mouse interactions 
+ * 4. Displays auto-hiding scrollbars during mouse interactions 
  *    and panning indicators during touch and keyboard interactions. 
  *    For Edge 12+
- * 6. Fonts on OSX will look more consistent with other systems that do not
+ * 5. Fonts on OSX will look more consistent with other systems that do not
  *    render text using sub-pixel anti-aliasing.
  *    For OSX.
- * 7. Remove the highlighting effect when "tapped" action on webkit.
+ * 6. Remove the highlighting effect when "tapped" action on webkit.
  *    For Androids.
- * 8. For some Androids.
+ * 7. For some Androids.
  *    phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
- * 9. Prevent iOS text size adjust after orientation change, without disabling
+ * 8. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  *    For iOS Safari 5.1+.
  */
 
-html {
-  font-family: sans-serif; /* 1 */
+ html {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; /* 1 */
   overflow-y: scroll; /* 2 */
   overflow: -moz-scrollbars-vertical; /* 3 */
-  scroll-behavior: smooth; /* 4 */
-  -ms-overflow-style: -ms-autohiding-scrollbar; /* 5 */
-  -moz-osx-font-smoothing: grayscale; /* 6 */
-  -webkit-font-smoothing: antialiased; /* 6 */
-  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 7 */
-  -webkit-tap-highlight-color: transparent; /* 8 */
-  -webkit-text-size-adjust: 100%; /* 9 */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* 4 */
+  -moz-osx-font-smoothing: grayscale; /* 5 */
+  -webkit-font-smoothing: antialiased; /* 5 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+  -webkit-text-size-adjust: 100%; /* 8 */
 }
 
 /* Grouping content
 ---------------------------------------------------------------------------- */
 
-/*
+/**
  * Prevents certain content from spilling their container.
  */
 
@@ -94,7 +91,7 @@ pre {
   max-width: 100%;
 }
 
-/*
+/**
  * A better looking default horizontal rule.
  */
 
@@ -110,19 +107,19 @@ hr {
 /* Text-level semantics
 ---------------------------------------------------------------------------- */
 
-/* 
- * 2. Removes delay from tapping on clickable elements.
+/**
+ * 1. Removes delay from tapping on clickable elements.
  *    www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
- * 3. Removes gaps in links underline in iOS 8+ and Safari 8+.
+ * 2. Removes gaps in links underline in iOS 8+ and Safari 8+.
  */
 
 a {
   -ms-touch-action: manipulation;
-      touch-action: manipulation; /* 2 */
-  -webkit-text-decoration-skip: objects; /* 3 */
+      touch-action: manipulation; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
 }
 
-/*
+/**
  * Give a help cursor to elements that give extra info on `:hover`.
  */
 
@@ -131,7 +128,7 @@ dfn[title] {
   cursor: help;
 }
 
-/*
+/**
  * 1. Display the text as it was written and line breaks so that 
  *    the text does not leave the block.
  * 2. Prevents certain content from spilling their container.
@@ -145,7 +142,7 @@ code {
 /* Embedded content
 ---------------------------------------------------------------------------- */
 
-/* 
+/** 
  * Removes delay from tapping on clickable elements.
  * www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
  */
@@ -155,7 +152,7 @@ area {
       touch-action: manipulation;
 }
 
-/*
+/**
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers.
  * //github.com/h5bp/html5-boilerplate/issues/440
@@ -170,7 +167,7 @@ video {
   vertical-align: middle;
 }
 
-/*
+/**
  * Preserves the aspect ratio.
  */
 
@@ -178,7 +175,7 @@ img {
   height: auto;
 }
 
-/*
+/**
  * Disable highlight on image when select and drag it with the mouse.
  * 1. For Firefox 2+, Firefox for Android 33+.
  * 2. For Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+.
@@ -193,7 +190,7 @@ img::selection { /* 2 */
   background-color: transparent;
 }
 
-/*
+/**
  * Prevents certain content from spilling their container.
  */
 
@@ -203,7 +200,7 @@ video {
   max-width: 100%;
 }
 
-/*
+/**
  * Change the fill color to match the text color in all browsers.
  */
 
@@ -214,19 +211,20 @@ svg {
 /* Forms
 ---------------------------------------------------------------------------- */
 
-/*
+/**
  * Gives a pointer cursor to clickable forms elements.
  */
 
-button,
-input[type='image'],
-input[type='submit'], 
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled),
 label[for],
 select {
   cursor: pointer;
 }
 
-/*
+/**
  * Remove the tapping delay from clickable elements.
  * www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
  */
@@ -240,7 +238,7 @@ textarea {
       touch-action: manipulation;
 }
 
-/*
+/**
  * Fix vertical align.
  */
 
@@ -251,7 +249,7 @@ select {
   vertical-align: middle;
 }
 
-/*
+/**
  * Prevents certain content from spilling their container.
  */
 
@@ -260,7 +258,7 @@ textarea {
   max-width: 100%;
 }
 
-/*
+/**
  * Allow only vertical resizing of textareas.
  * For Firefox 5+, Chrome 4+, Safari 4+, opera 12.1+.
  */
@@ -272,7 +270,7 @@ textarea {
 /* Tables
 ---------------------------------------------------------------------------- */
 
-/*
+/**
  * Prevents certain content from spilling their container.
  */
 
