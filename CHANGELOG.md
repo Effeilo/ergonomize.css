@@ -1,3 +1,10 @@
+#### ergonomize.css v4.1 : April 13, 2023
+
+* Remove `selection` rules (normalisation and theme, not ergonomics).
+* Remove `hr` rules (theme, not ergonomics).
+* Remove fill color `svg` rule (normalisation, not ergonomics).
+* Remove Fix vertical align (normalisation, not ergonomics). 
+
 #### ergonomize.css v4.0 : April 1, 2023
 
 * Remove `@viewport` (no longer supports).

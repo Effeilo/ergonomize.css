@@ -1,4 +1,4 @@
-![Ergonomize.css v4.0](https://www.ergonomizecss.com/assets/medias/images/ergonomizecss-banner-doc-github-big.webp)
+![Ergonomize.css v4.1](https://www.ergonomizecss.com/assets/medias/images/ergonomizecss-banner-doc-github-big.webp)
 
 # Documentation
 
@@ -17,34 +17,6 @@ If the user has not requested the system to minimize the amount  of animation or
     }
 }
 ```
-
-## Selection
-
-This part removes a possible default shadow of text during a selection, making the text unreadable according to the background color of the selected text.
-
-```css
-/**
- * 1. For Firefox 2+, Firefox for Android 33+.
- * 2. For Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+.
- */
-
-::-moz-selection {
-    background: #b3d4fc;
-    color: #fff;
-    text-shadow: none; /* 1 */
-}
-
-::selection {
-    background: #b3d4fc;
-    color: #fff;
-    text-shadow: none; /* 2 */
-}
-```
-
-These selection rule sets have to be separate and the `background` property must be defined when declaring `::selection` in a CSS file. Feel free to adapt `background` and `color` values to your project.
-
-* [Bug fix source: Mike Taylor](https://twitter.com/miketaylr/status/12228805301)
-* [::selection browsers support](https://caniuse.com/#feat=css-selection)
 
 ## The root element
 
@@ -128,19 +100,6 @@ pre {
 }
 ```
 
-Adds a better looking default horizontal rule.
-
-```css
-hr {
-    border: 0;
-    border-top: 1px solid #ccc;
-    display: block;
-    height: 1px;
-    margin: 1em 0;
-    padding: 0;
-}
-```
-
 ## Text-level semantics
 
 Removes delay from tapping on links and removes gaps in links underline in iOS 8+ and Safari 8+.
@@ -186,21 +145,6 @@ area {
 
 * [Click delay mobile devices trick source](https://www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/)
 
-Removes the gap between `audio`, `canvas`, `iframe`, `image`, `video` elements and the bottom of their container.
-
-```css
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-```
-
-* [Remove gap embedded content trick source](https://github.com/h5bp/html5-boilerplate/issues/440)
-
 Preserves the aspect ratio on image.
 
 ```css
@@ -238,14 +182,6 @@ video {
 }
 ```
 
-Changes the fill color to match the text color in all browsers.
-
-```css
-svg {
-    fill: currentColor;
-}
-```
-
 ## Forms
 
 Gives a pointer cursor to clickable forms elements.
@@ -275,17 +211,6 @@ textarea {
 ```
 
 * [Click delay mobile devices trick source](https://www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/)
-
-Fixes vertical align for form elements.
-
-```css
-button,
-input,
-label,
-select {
-    vertical-align: middle;
-}
-```
 
 Prevents `input` and `textarea` content from spilling their container.
 

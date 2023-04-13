@@ -1,6 +1,6 @@
-![Ergonomize.css v4.0](https://www.ergonomizecss.com/assets/medias/images/ergonomizecss-banner-github.webp)
+![Ergonomize.css v4.1](https://www.ergonomizecss.com/assets/medias/images/ergonomizecss-banner-github.webp)
 
-# ergonomize.css v4.0
+# ergonomize.css v4.1
 
 Ergonomize.css is a CSS file aiming to bring additional rules for html elements to improve the user experience without altering their default styles.
 
