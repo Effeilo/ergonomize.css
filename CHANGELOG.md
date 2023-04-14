@@ -1,3 +1,8 @@
+#### ergonomize.css v4.2 : April 14, 2023
+
+* Remove some rules for old browsers.
+* Add a more readable tab size.
+
 #### ergonomize.css v4.1 : April 13, 2023
 
 * Remove `selection` rules (normalisation and theme, not ergonomics).

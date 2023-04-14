@@ -1,4 +1,4 @@
-![Ergonomize.css v4.1](https://www.ergonomizecss.com/assets/medias/images/ergonomizecss-banner-doc-github-big.webp)
+![Ergonomize.css v4.2](https://www.ergonomizecss.com/assets/medias/images/ergonomizecss-banner-doc-github-big.webp)
 
 # Documentation
 
@@ -38,13 +38,9 @@ html {
 Forces scrollbars to always be visible to prevent awkward jumps when navigating between pages that do/do not have enough content to produce scrollbars naturally.
 
 ```css
-/**
- * 1. For some Firefox.
- */
 
 html {
     overflow-y: scroll;
-    overflow: -moz-scrollbars-vertical; /* 1 */
 }
 ```
 
@@ -89,6 +85,15 @@ html {
 }
 ```
 
+Forces scrollbars to always be visible to prevent awkward jumps when navigating between pages that do/do not have enough content to produce scrollbars naturally.
+
+```css
+html {
+  tab-size: 4;
+  -moz-tab-size: 4;
+}
+```
+
 ## Grouping content
 
 Prevents `blockquote` and `pre` content from spilling their container.
@@ -102,13 +107,12 @@ pre {
 
 ## Text-level semantics
 
-Removes delay from tapping on links and removes gaps in links underline in iOS 8+ and Safari 8+.
+Use a more readable tab size.
 
 ```css
 a {
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
-    -webkit-text-decoration-skip: objects; /* 2 */
+    touch-action: manipulation;
+    -webkit-text-decoration-skip: objects;
 }
 ```
 
@@ -138,8 +142,7 @@ Removes delay from tapping on `area`.
 
 ```css
 area {
-    -ms-touch-action: manipulation;
-     touch-action: manipulation;
+    touch-action: manipulation;
 }
 ```
 
@@ -205,8 +208,7 @@ input,
 label,
 select,
 textarea {
-    -ms-touch-action: manipulation;
-        touch-action: manipulation;
+    touch-action: manipulation;
 }
 ```
 

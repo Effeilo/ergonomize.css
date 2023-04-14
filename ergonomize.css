@@ -1,4 +1,4 @@
-/*! ergonomize.css v4.1 | github.com/Effeilo/ergonomize.css | MIT Licence 2023 @effeilo */
+/*! ergonomize.css v4.2 | 2023 MIT Licence | github.com/Effeilo/ergonomize.css */
 
 /* Scroll Behavior
 ---------------------------------------------------------------------------- */
@@ -6,10 +6,10 @@
 /**
  * 1. If the user has not requested the system to minimize the amount 
       of animation or movement,
- *    https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+      @see https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
  * 2. Defines a smooth scroll effect to the scrolling behavior for a scrolling box, 
- *    when scrolling happens due to navigation or CSSOM scrolling APIs.
- *    https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior
+      when scrolling happens due to navigation or CSSOM scrolling APIs.
+      @see https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior
  */
 
 @media (prefers-reduced-motion: no-preference) { /* 1 */
@@ -23,37 +23,38 @@
 
 /**
  * 1. Improve consistency of default fonts in all browsers. 
-      https://github.com/sindresorhus/modern-normalize/issues/3
+      @see https://github.com/sindresorhus/modern-normalize/issues/3
  * 2. Force scrollbars to always be visible to prevent awkward jumps when
- *    navigating between pages that do/do not have enough content to produce
- *    scrollbars naturally.
- * 3. For some Firefox.
- *    css-tricks.com/snippets/css/force-vertical-scrollbar/
- * 4. Displays auto-hiding scrollbars during mouse interactions 
- *    and panning indicators during touch and keyboard interactions. 
- *    For Edge 12+
- * 5. Fonts on OSX will look more consistent with other systems that do not
- *    render text using sub-pixel anti-aliasing.
- *    For OSX.
- * 6. Remove the highlighting effect when "tapped" action on webkit.
- *    For Androids.
- * 7. For some Androids.
- *    phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
- * 8. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- *    For iOS Safari 5.1+.
+      navigating between pages that do/do not have enough content to produce
+      scrollbars naturally.
+      @see https://css-tricks.com/snippets/css/force-vertical-scrollbar/
+ * 3. Displays auto-hiding scrollbars during mouse interactions 
+      and panning indicators during touch and keyboard interactions. 
+      @for Edge 12+
+ * 4. Fonts on OSX will look more consistent with other systems that do not
+      render text using sub-pixel anti-aliasing.
+      @for OSX.
+ * 5. Remove the highlighting effect when "tapped" action on webkit.
+      @for Androids.
+ * 6. @for some Androids.
+      @see https://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
+ * 7. Prevent iOS text size adjust after orientation change, without disabling
+      user zoom.
+      @for iOS Safari 5.1+.
+ * 8. Use a more readable tab size.
  */
 
  html {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; /* 1 */
   overflow-y: scroll; /* 2 */
-  overflow: -moz-scrollbars-vertical; /* 3 */
-  -ms-overflow-style: -ms-autohiding-scrollbar; /* 4 */
-  -moz-osx-font-smoothing: grayscale; /* 5 */
-  -webkit-font-smoothing: antialiased; /* 5 */
-  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 6 */
-  -webkit-tap-highlight-color: transparent; /* 7 */
-  -webkit-text-size-adjust: 100%; /* 8 */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* 3 */
+  -moz-osx-font-smoothing: grayscale; /* 4 */
+  -webkit-font-smoothing: antialiased; /* 4 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* 5 */
+  -webkit-tap-highlight-color: transparent; /* 6 */
+  -webkit-text-size-adjust: 100%; /* 7 */
+  tab-size: 4; /* 8 */
+  -moz-tab-size: 4; /* 8 */
 }
 
 /* Grouping content
@@ -73,13 +74,12 @@ pre {
 
 /**
  * 1. Removes delay from tapping on clickable elements.
- *    www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
+      @see https://www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
  * 2. Removes gaps in links underline in iOS 8+ and Safari 8+.
  */
 
 a {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation; /* 1 */
+  touch-action: manipulation; /* 1 */
   -webkit-text-decoration-skip: objects; /* 2 */
 }
 
@@ -94,7 +94,7 @@ dfn[title] {
 
 /**
  * 1. Display the text as it was written and line breaks so that 
- *    the text does not leave the block.
+      the text does not leave the block.
  * 2. Prevents certain content from spilling their container.
  */
 
@@ -108,12 +108,11 @@ code {
 
 /** 
  * Removes delay from tapping on clickable elements.
- * www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
+   @see https://www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
  */
 
 area {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 /**
@@ -126,9 +125,9 @@ img {
 
 /**
  * Disable highlight on image when select and drag it with the mouse.
- * 1. For Firefox 2+, Firefox for Android 33+.
- * 2. For Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+.
- * //stackoverflow.com/questions/6816080/how-to-disable-highlight-on-a-image
+ * 1. @for Firefox 2+, Firefox for Android 33+.
+ * 2. @for Chrome 4+, Safari 3.1+, Opera 9.6+, Android 4.4+.
+   @see https://stackoverflow.com/questions/6816080/how-to-disable-highlight-on-a-image
  */
 
 img::-moz-selection { /* 1 */
@@ -167,7 +166,7 @@ select {
 
 /**
  * Remove the tapping delay from clickable elements.
- * www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
+   @see https://www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/
  */
 
 button,
@@ -175,8 +174,7 @@ input,
 label,
 select,
 textarea {
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 /**
@@ -190,7 +188,7 @@ textarea {
 
 /**
  * Allow only vertical resizing of textareas.
- * For Firefox 5+, Chrome 4+, Safari 4+, opera 12.1+.
+   @for Firefox 5+, Chrome 4+, Safari 4+, opera 12.1+.
  */
 
 textarea {
