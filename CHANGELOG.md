@@ -1,3 +1,7 @@
+#### ergonomize.css v4.3 : April 14, 2023
+
+* Improve consistency of default fonts in all browsers for `pre`, `code`,`kbd` and `samp`
+
 #### ergonomize.css v4.2 : April 14, 2023
 
 * Remove some rules for old browsers.

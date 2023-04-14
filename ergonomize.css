@@ -1,4 +1,4 @@
-/*! ergonomize.css v4.2 | 2023 MIT Licence | github.com/Effeilo/ergonomize.css */
+/*! ergonomize.css v4.3 | 2023 MIT Licence | github.com/Effeilo/ergonomize.css */
 
 /* Scroll Behavior
 ---------------------------------------------------------------------------- */
@@ -44,7 +44,7 @@
  * 8. Use a more readable tab size.
  */
 
- html {
+html {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; /* 1 */
   overflow-y: scroll; /* 2 */
   -ms-overflow-style: -ms-autohiding-scrollbar; /* 3 */
@@ -67,6 +67,15 @@
 blockquote,
 pre {
   max-width: 100%;
+}
+
+/**
+ * Improve consistency of default fonts in all browsers. 
+   @see https://github.com/sindresorhus/modern-normalize/issues/3
+ */
+
+pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; 
 }
 
 /* Text-level semantics
@@ -101,6 +110,17 @@ dfn[title] {
 code {
   white-space: pre-wrap; /* 1 */
   max-width: 100%; /* 2 */
+}
+
+/**
+ * Improve consistency of default fonts in all browsers. 
+   @see https://github.com/sindresorhus/modern-normalize/issues/3
+ */
+
+code,
+kbd,
+samp {
+   font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; 
 }
 
 /* Embedded content

@@ -105,6 +105,19 @@ pre {
 }
 ```
 
+Improve consistency of default fonts in all browsers.
+
+```css
+pre {
+    font-family: ui-monospace, 
+                 SFMono-Regular, 
+                 Consolas, 
+                 'Liberation Mono', 
+                 Menlo, 
+                 monospace;
+}
+```
+
 ## Text-level semantics
 
 Use a more readable tab size.
@@ -133,6 +146,21 @@ Display for `code` the text as it was written and line breaks so that text does 
 code {
     white-space: pre-wrap;
     max-width: 100%;
+}
+```
+
+Improve consistency of default fonts in all browsers.
+
+```css
+code,
+kbd,
+samp {
+    font-family: ui-monospace, 
+                 SFMono-Regular, 
+                 Consolas, 
+                 'Liberation Mono', 
+                 Menlo, 
+                 monospace;
 }
 ```
 
