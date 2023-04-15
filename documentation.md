@@ -176,6 +176,19 @@ area {
 
 * [Click delay mobile devices trick source](https://www.sitepoint.com/5-ways-prevent-300ms-click-delay-mobile-devices/)
 
+Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers.
+
+```css
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+```
+
 Preserves the aspect ratio on image.
 
 ```css
